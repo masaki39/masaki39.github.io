@@ -23,6 +23,7 @@ enableToc: false
 [[MOCの運用法]]
 [[Dataviewの使い方]]
 [[Dataviewを使い込む]]
+[[Self-hosted LiveSync]]
 
 # サイトの作成方法について
 [[Obsidianの記事を無料で公開する]]
