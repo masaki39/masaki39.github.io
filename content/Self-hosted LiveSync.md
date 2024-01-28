@@ -1,3 +1,7 @@
+---
+created: 2024-01-19
+updated: 2024-01-28
+---
 
 # はじめに
 
@@ -17,7 +21,6 @@ Obsidian Syncに課金すれば簡単に全て解決するのだが、無料で�
 >[Fly.io for self hosting CouchDB · vrtmrz/obsidian-livesync · Discussion #85 · GitHub](https://github.com/vrtmrz/obsidian-livesync/discussions/85)
 
 手順は既に解説されているので、このページでは**素人でも何となく何をしてるかがわかるように**解説をしてみる
-ちなみに私も素人なので浅い理解にはご了承を
 
 # 設定の大まかな流れ
 
@@ -152,6 +155,7 @@ cdコマンドでcouchdbフォルダに入る
 flyctl launch --image couchdb
 ```
 flyctlコマンドでcouchdbというタイプのアプリを作るコマンド
+DockerでContainerを作るのと同じ←分からなくてもOK
 
 アナウンスではターミナルで設定の問答が表示されるって書いてあったけど私がやった時は
 **?** **Do you want to tweak these settings before proceeding?**
@@ -219,15 +223,20 @@ FROM couchdb:latest
 RUN sed -i '2itouch /opt/couchdb/data/persistence.ini && chmod +w /opt/couchdb/data/persistence.ini && fallocate -l 512M /swapfile && chmod 0600 /swapfile && mkswap /swapfile && echo 10 > /proc/sys/vm/swappiness && swapon /swapfile && echo 1 > /proc/sys/vm/overcommit_memory' /docker-entrypoint.sh
 ```
 このような内容が記載されたdockerfileを作る
+Dockerfile
 
 Dockerfileは**拡張子のないテキストファイル**なのでMacならテキストエディット、Windowsならメモ帳とかで適当にファイルを作成する
+
+> [!caution]
+> この時.textなどの拡張子が表示されず、消し忘れていることがあるので注意
+
 
 ここさっきのfly.tomlをみると下記のような部分がある
 ```
 [build]
   dockerfile = "./Dockerfile"
 ```
-dockerfileをもとにアプリを構築するということかな
+さっきのdockerfileをもとにアプリを構築するということかな
 "./Dockerfile"のところ、これはカレントディレクトリのDockerfileという名前のファイルを指しているので
 
 ![Pasted image 20240120183040.png](Pasted%20image%2020240120183040.png)
@@ -260,7 +269,7 @@ https://アプリ名.fly.dev
 # 11.  Open /_utils, Set up CouchDB (Just hit  Configure a Single Node)
 
 ```
-https://アプリ名.fly.dev/_utilis
+https://アプリ名.fly.dev/_utils
 ```
 これを開くとアプリのログイン画面が開くので設定したアプリのユーザー名、パスワードを入力してログイン
 
