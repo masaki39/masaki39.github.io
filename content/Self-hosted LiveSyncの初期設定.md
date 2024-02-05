@@ -1,6 +1,11 @@
 ---
+aliases: 
+tags:
+  - obsidian
+  - obsidien/plugin
+  - publish
 created: 2024-01-19
-updated: 2024-01-28
+updated: 2024-02-05
 ---
 
 # はじめに
@@ -11,6 +16,8 @@ Obsidianの1番の問題は同期
 
 Obsidian Syncに課金すれば簡単に全て解決するのだが、無料でもSelf-hosted LiveSyncというコミュニティプラグインで解決できるみたいなので導入してみた
 
+![https://user-images.githubusercontent.com/45774780/137355323-f57a8b09-abf2-4501-836c-8cb7d2ff24a3.gif](https://user-images.githubusercontent.com/45774780/137355323-f57a8b09-abf2-4501-836c-8cb7d2ff24a3.gif)
+
 サーバー上にデータベースを管理するアプリ(coachDB)をデプロイ(構築)して、そこを介して同期させるような仕組みの様子
 
 ただし、**サーバー上にアプリを作るのは自力でやらないといけない**のでここがSelf-hostedということだろう
@@ -20,7 +27,7 @@ Obsidian Syncに課金すれば簡単に全て解決するのだが、無料で�
 > [!cite] 
 >[Fly.io for self hosting CouchDB · vrtmrz/obsidian-livesync · Discussion #85 · GitHub](https://github.com/vrtmrz/obsidian-livesync/discussions/85)
 
-手順は既に解説されているので、このページでは**素人でも何となく何をしてるかがわかるように**解説をしてみる
+手順は既に説明されているがかなり前提知識を要するので、このページでは**素人でも何となく何をしてるかがわかるように**解説をしてみる
 
 # 設定の大まかな流れ
 
@@ -79,9 +86,11 @@ end
 
 Windowsの場合とかHomebrew使用の場合はちょっと異なるので
 公式サイトに則ってもう少し解説する
+
 ## Macの場合
 
 Homebrewを使用している場合はこのコマンド
+
 ```
 brew install flyctl
 ```
@@ -90,6 +99,7 @@ Homebrewはパッケージ管理ソフト
 CLIのパッケージってどこに何が入っているのかが凄くわかりにくいので、CLIを日常的に使用する場合はMacならHomebrew、Windowsならscoopなどのパッケージ管理ソフトを使用すると便利
 Homebrewならbrewコマンドで何がインストールされているか、バージョンがどうかなどを一元管理できる
 ちなみにGUIのアプリをHomebrewで管理することも可能だったりする
+
 ```mermaid
 flowchart TD
 id1[(localPC)]
@@ -104,15 +114,21 @@ end
 ```
 
 Homebrewを使用していない場合はこのコマンド
+
 ```
 curl -L https://fly.io/install.sh | sh
 ```
+
 Linuxでも同じコマンドで良いらしい
+
 ## Windowsの場合
+
 このコマンド
+
 ```
 pwsh -Command "iwr https://fly.io/install.ps1 -useb | iex"
 ```
+
 scoopのようなパッケージ管理ソフトは公式には対応してないっぽい
 
 ## flyctlがインストールされた
@@ -129,6 +145,7 @@ flyctl auth signup
 flyctlコマンドでfly.ioのアカウント作成ページを開く
 ブラウザが自動で立ち上がるので適当にアカウントを作成する
 クレジットカードも登録しておく
+
 # 3. Create the working directory
 
 ```
@@ -141,10 +158,11 @@ cd couchdb
 ディレクトリを作る
 ディレクトリ≒フォルダくらいの認識で良いと思う
 ターミナルのディレクトリの初期位置はユーザー名のフォルダ
-mkdirでflyioフォルダを作成するとユーザー名のフォルダの直下にフォルダができる
-cdはディレクトリ移動コマンドなのでflyioフォルダに入る
-mkdirでcouchdbというフォルダを作る
-cdコマンドでcouchdbフォルダに入る
+
+1行目: mkdirでflyioフォルダを作成するとユーザー名のフォルダの直下にフォルダができる
+2行目: **cdはディレクトリ移動コマンド**なのでflyioフォルダに入る
+3行目: mkdirでcouchdbというフォルダを作る
+4行目: cdコマンドでcouchdbフォルダに入る
 
 こんな感じにフォルダが作成される↓
 ![Pasted image 20240120175440.png](Pasted%20image%2020240120175440.png)
@@ -154,8 +172,15 @@ cdコマンドでcouchdbフォルダに入る
 ```
 flyctl launch --image couchdb
 ```
+
 flyctlコマンドでcouchdbというタイプのアプリを作るコマンド
-DockerでContainerを作るのと同じ←分からなくてもOK
+
+> [!warning]
+> 移行のflyctlコマンドは全てcouchdbディレクトリ(フォルダ)内で実行すること
+> ターミナル/PowerShellはフォルダ内を移動できる
+> 前の手順でcdコマンドでcouchdbディレクトリ(フォルダ)内に既に入っているはず
+
+要するにDockerでContainerを作っている←これは分からなくてもOK
 
 アナウンスではターミナルで設定の問答が表示されるって書いてあったけど私がやった時は
 **?** **Do you want to tweak these settings before proceeding?**
@@ -172,9 +197,11 @@ DockerでContainerを作るのと同じ←分からなくてもOK
 
 続いてこのコマンド
 flyctlコマンドはflyと打っても機能する
+
 ```
 fly volumes create --region nrt couchdata --size 2
 ```
+
 nrtは東京の意味なので海外に住んでる場合は近いサーバーに設定する必要がある
 東京のサーバーに2GBの領域を確保しますよという意味っぽい
 
@@ -216,61 +243,71 @@ primary_region = "nrt"ここは地域を入力。日本ならこのまま。
 COUCHDB_USER = "your_username"ここはアプリを使用する際のユーザー名を設定
 その他はコピペでオッケー
 
-# 7.  Prepare the dockerfile like this.
+# 7. Prepare the dockerfile like this.
 
 ```
 FROM couchdb:latest
 RUN sed -i '2itouch /opt/couchdb/data/persistence.ini && chmod +w /opt/couchdb/data/persistence.ini && fallocate -l 512M /swapfile && chmod 0600 /swapfile && mkswap /swapfile && echo 10 > /proc/sys/vm/swappiness && swapon /swapfile && echo 1 > /proc/sys/vm/overcommit_memory' /docker-entrypoint.sh
 ```
+
 このような内容が記載されたdockerfileを作る
-Dockerfile
 
 Dockerfileは**拡張子のないテキストファイル**なのでMacならテキストエディット、Windowsならメモ帳とかで適当にファイルを作成する
 
 > [!caution]
 > この時.textなどの拡張子が表示されず、消し忘れていることがあるので注意
 
-
 ここさっきのfly.tomlをみると下記のような部分がある
+
 ```
 [build]
   dockerfile = "./Dockerfile"
 ```
+
 さっきのdockerfileをもとにアプリを構築するということかな
 "./Dockerfile"のところ、これはカレントディレクトリのDockerfileという名前のファイルを指しているので
 
 ![Pasted image 20240120183040.png](Pasted%20image%2020240120183040.png)
 この様にファイルを配置する
+
 # 8. Set your password as you like.
 
 ```
 flyctl secrets set COUCHDB_PASSWORD=your_password
 ```
+
 アプリのパスワードを設定する
+
 # 9. Deploy
 
 ```
 flyctl deploy
 ```
+
 アプリをデプロイ(構築)する
+couchdb内で実行すれば先程作成したDockerfileやfly.tomlを読み込んでくれる
 
 # 10. Open in browser.
 
 ```
 flyctl open
 ```
+
 ブラウザでアプリのページを開く
 自動的に下記のページが開く↓
+
 ```
 https://アプリ名.fly.dev
 ```
+
 何か表示されたら成功
 
-# 11.  Open /_utils, Set up CouchDB (Just hit  Configure a Single Node)
+# 11. Open /_utils, Set up CouchDB (Just hit  Configure a Single Node)
 
 ```
 https://アプリ名.fly.dev/_utils
 ```
+
 これを開くとアプリのログイン画面が開くので設定したアプリのユーザー名、パスワードを入力してログイン
 
 私の画面はすでにデータベースが生成されているが、最初はなにも表示されていないはず↓
@@ -298,12 +335,12 @@ https://アプリ名.fly.dev/_utils
 |Password|COUCHDB_PASSWORD|
 |Database name|任意のデータベース名(小文字半角英数字) |
 
-
 # 13. Hit the `Check database configuration` button and Every `Fix` button.
 
 設定のURIやユーザー名、パスワード、データーベース名を入力されているところの下にcheckボタンがあり、押すとよく分からないがデータベースの設定を色々チェックしてくれる
 駄目な部分は横にfixと表示されるので全てクリックする
 ![Pasted image 20240120185427.png](Pasted%20image%2020240120185427.png)
+
 # 14. Hit the `Test database connection` button.  
 
 さっきのチェックボタンの上に配置してあるテストボタンを押す
@@ -312,12 +349,15 @@ https://アプリ名.fly.dev/_utils
 # 15. If you are worried about how it will cost too. be sure to stop the app. (We can run it again with count 1.)
 
 思ったより使ってしまってお金かかってきた場合はflyコマンドでオフにできる
+
 ```
 fly scale count 0
 ```
+
 これを1にすると再開できる
 これはcouchdbのディレクトリ内で実行すればいいのかな
 今のところ使用予定はないので不明
+
 # 端末を追加する
 
 これは簡単

@@ -163,7 +163,7 @@ defaultではoffなので、例えばbacklinkなどの代わりに入れるな�
 ## ローカル環境でテスト
 
 ローカル環境でサイトを構築する
-```
+```zsh
 cd /Users/masaki/Documents/GitHub/masaki39.github.io
 npx quartz build --serve
 ```
@@ -171,7 +171,7 @@ npx quartz build --serve
 cdコマンドでローカルリポジトリへの絶対パスを書いてどっかに保存しておくと次回からコピペで良くなる
 
 サイトを開く
-```
+```zsh
 open http://localhost:8080
 ```
 
