@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - obsidian
-  - obsidien/plugin
+  - obsidian/plugin
   - publish
 created: 2024-01-19
 updated: 2024-02-05

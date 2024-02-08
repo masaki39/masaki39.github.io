@@ -2,7 +2,7 @@
 aliases: 
 tags:
   - obsidian
-  - obsidien/plugin
+  - obsidian/plugin
   - dataview
 created: 2023-12-12
 updated: 2024-02-05
