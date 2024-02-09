@@ -1,7 +1,15 @@
 ---
-created: 2023-12-05
-updated: 2023-12-06
+date: 2023-12-12
+updated: 2024-02-09
+aliases: 
+tags:
+  - obsidian
+  - obsidian/plugin
+  - templater
+title: 
+description:
 ---
+
 # Templaterプラグインについて
 
 TemplaterはObsidianのコミュニティプラグインの1つで
@@ -57,6 +65,7 @@ Templaterに備え付けのtp.から始まるmoduleのみを使用する場合�
 
 さらになんとjavascriptでフロントマターを好きな様に書き換えることができる
 以下が作成例である
+
 ```
 <%*
   const file = tp.file.find_tfile(tp.file.path(true));
@@ -86,9 +95,9 @@ keyがなければ追加され、あっても更新される
 
 これが今回の調査の目的である
 以前の記事でCitationsプラグインを用いたZoteroとObsidianでの文献管理についてまとめた
+
 > [!seealso] Seealso
 > [[Zotero×Obsidian 文献管理のすゝめ]]
-> 
 
 Citationsプラグインは文献のメタデータをフロントマターに自動取得するプラグインであるが著者名が分割されずに取得されるという問題がある
 
@@ -132,10 +141,12 @@ authors:
 詳細な使い方は別記事→　[[Dataviewの使い方]]
 
 例えば
+
 ```
 table authors[0] as "First Author"
 where authors[0] = "tanaka" 
 ```
+
 dataviewでこう指定しておくと、筆頭著者が"tanaka"のノートのみを抽出できる
 
 # 終わりに
@@ -144,5 +155,6 @@ dataviewでこう指定しておくと、筆頭著者が"tanaka"のノートの�
 以前に取り込んだ文献もPythonを用いれば一気に編集できると思うが、失敗したら悲しいのと、そこまでまだ需要が無いので今回は行わないことにした
 
 # 参考サイト
+
 [Introduction - Templater](https://silentvoid13.github.io/Templater/introduction.html)
 [Issue using app.fileManager.processFrontmatter - Developers & API - Obsidian Forum](https://forum.obsidian.md/t/issue-using-app-filemanager-processfrontmatter/51233/6)

@@ -1,13 +1,15 @@
 ---
-aliases: []
+date: 2023-10-02
+updated: 2024-02-09
+aliases: 
 tags:
   - obsidian
   - zotero
   - citations
   - dataview
   - publish
-created: 2023-10-02
-updated: 2024-02-05
+title: 
+description:
 ---
 
 # はじめに

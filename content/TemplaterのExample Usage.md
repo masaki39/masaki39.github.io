@@ -1,3 +1,16 @@
+---
+date: 2024-02-03
+updated: 2024-02-09
+aliases: 
+tags:
+  - obsidian
+  - obsidian/plugin
+  - templater
+  - publish
+title: 
+description:
+---
+
 # はじめに
 
 TemplaterはTemplateにJavaScriptのcodeを埋め込めるコミュニティプラグインである
@@ -6,9 +19,9 @@ TemplaterはTemplateにJavaScriptのcodeを埋め込めるコミュニティプ�
 
 汎用性が高い一面、JavaScriptの記述方法に乗っ取らないといけないので、難しい一面もある
 Templaterに備え付けのtp.系のmoduleを使用するのは割りと簡単で、使い方は結局公式ドキュメントが強い
+
 > [!cite] 公式ドキュメント
 > [Introduction - Templater](https://silentvoid13.github.io/Templater/)
-> 
 
 # tp.date系
 
@@ -16,6 +29,7 @@ Templaterに備え付けのtp.系のmoduleを使用するのは割りと簡単�
 Daily Noteとの親和性が高そう
 
 公式ドキュメントに記載のExample↓↓
+
 ```
 // Date now
 <% tp.date.now() %>
@@ -56,28 +70,35 @@ Daily Noteとの親和性が高そう
 
 割りとシンプルなルール
 tp.date.nowの場合
+
 ```
 <% tp.date.now("出力する日付のフォーマット", リファレンスの日付との差, リファレンス, "リファレンスの日付のフォーマット") %>
 ```
+
 ということの様子
 
 日付のフォーマットはここを参照→[Moment.js | Docs](https://momentjs.com/docs/#/displaying/format/)
 
 このルールに従いDaily NoteからCalendar PluginのWeekly Noteへのリンクを書いてみる
+
 ```
 [[<% tp.date.now("YYYY-[W]ww", 0, tp.file.title, "YYYY-MM-DD") %>]]
 ```
+
 このコードはDaily Noteのタイトルから`YYYY-MM-DD`形式で日付情報を取得し、その日付情報から`YYYY-[W]ww`形式で日付を出力する
 
 Daily Noteのタイトルから曜日を取得する
+
 ```
 <% tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD") %>
 ```
+
 曜日情報を基にWeekly NoteからDaily Noteへの紐づけなどができそう
 
 # tp.file系
 
 公式ドキュメントに記載のExample↓↓
+
 ```
 // Retrieve file content
 <% tp.file.content %>
@@ -166,9 +187,11 @@ Daily Noteのタイトルから曜日を取得する
 ファイルから情報を抜いたり、新規に作ったり、編集したりできるっぽいが、今の所有効な使い方は思いつかない
 
 Daily Noteで
+
 ```
 <% tp.file.title %>
 ```
+
 が日付情報になるので使えるというくらいか
 
 Monthly Noteや四半期のNoteを作る場合はtp.dateとの組み合わせで実現できそう
@@ -180,12 +203,14 @@ Periodic Noteでいい話かもしれないが、多分こっちのほうがカ�
 
 フロントマターのkey名から情報を取得する
 ↓はkey名が`alias`と`note type`の場合
+
 ```
 <% tp.frontmatter.alias %>
 <% tp.frontmatter["note type"] %>
 ```
 
 ↓はkey名が`categories`で中に複数の情報がリスト表示されている場合
+
 ```
 <% tp.frontmatter.categories.map(prop => `  - "${prop}"`).join("\n") %>
 ```
@@ -213,6 +238,7 @@ tp.から始まるコードはTemplaterの機能として搭載されたmodule�
 これはちょっと専門知識が必要そう
 
 調べた範囲ではフロントマターの書き換えが便利そう↓
+
 ```
 <%*
   const file = tp.file.find_tfile(tp.file.path(true));
@@ -221,9 +247,11 @@ tp.から始まるコードはTemplaterの機能として搭載されたmodule�
   });
 %>
 ```
+
 tp.系と組み合わせて最強のTemplateを作ろう(かなり高難易度...)
 
 フロントマターの書き換えに関しては以前の記事を参照
+
 > [!seealso] seealso
 > 
 > [[Templaterでフロントマターを書き換える]]

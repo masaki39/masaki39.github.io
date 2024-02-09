@@ -1,6 +1,7 @@
 ---
 created: 2023-07-05
-updated: 2024-02-08
+date: 2023-07-05
+updated: 2024-02-09
 aliases:
   - Citationsのテンプレを更新する
 tags:
@@ -8,8 +9,9 @@ tags:
   - obsidian/plugin
   - citations
   - python
+  - publish
 title: Citationsのテンプレを更新する
-description: 
+description:
 ---
 
 # はじめに

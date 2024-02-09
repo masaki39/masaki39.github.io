@@ -1,7 +1,15 @@
 ---
-created: 2023-12-13
-updated: 2023-12-15
+date: 2023-12-13
+updated: 2024-02-09
+aliases: 
+tags:
+  - obsidian
+  - quartz
+  - publish
+title: 
+description:
 ---
+
 # はじめに
 
 Obsidianはマークダウン形式でメモをとるので、マークダウンをhtmlに変換したらそのままwebサイトとして使用できる
@@ -18,6 +26,7 @@ GitHubPagesならマークダウンファイルから自動的にWebサイトを
 [Creating a blog site with Quartz 4 and Obsidian](https://kanpov.github.io/articles/creating-blog-site-with-quartz4-obsidian)
 公式ドキュメントはこちら
 [Welcome to Quartz 4](https://quartz.jzhao.xyz)
+
 # 必要なもの
 
 - obsidian: 記事を書く用
@@ -46,13 +55,16 @@ gitは最新版じゃないと動かないことがあるので注意
 
 後のアップデートを見こしてv4のみのチェック外しておく
 リポジトリの名前は自由にできるが必ず下記のルールで記載する
+
 ```
 masaki39.github.io
 ```
+
 ユーザーネームは自分のユーザーネームに置き換える
 GitHubPagesは1つのアカウントにつき1つのリポジトリが登録できるようになっていて、命名規則が決まっている
 
 ## トークンの生成
+
 トークンはパスワードの代わりの位置づけ
 下記記事参照
 [GitHub – アクセストークンの作成・取得方法とgit操作での使い方](https://howpon.com/5308)
@@ -65,33 +77,42 @@ GitHubPagesは1つのアカウントにつき1つのリポジトリが登録で�
 以下はターミナルに打ち込んで操作する
 
 ## クローンの作成
+
 フォークしたリポジトリをローカルにクローンする
 もらってきた設計図を家に持って帰る的なイメージ
+
 ```
 cd Documents/GitHub
 git clone https://github.com/masaki39/masaki39.github.io.git
 ```
+
 これは元々GitHubというフォルダがあるとして、そこにクローンを作成する例
 cdはターミナルでのフォルダ移動で、記載方法は絶対パスでも相対パスでも良い
 初回はユーザー名とパスワードを求められるので、パスワードの際に先程生成したトークンを入力する
 
 これでローカルにもリポジトリが複製された
+
 ## npm(パッケージ管理)のインストール
 
 npm(パッケージ管理ソフト)をクローンしたローカルリポジトリにインストールする
 パッケージ管理ソフトがないとプログラムが動かせない
+
 ```
 cd masaki39.github.io
 npm install
 ```
+
 リポジトリ内に移動してnpmをインストールする
+
 ## Quartzをたちあげる
 
 ここまで準備してようやくQuartzが起動できる
 同様にローカルリポジトリ内で初期設定のコマンドを入力する
+
 ```
 npx quartz create
 ```
+
 このときcontentというフォルダが生成される
 contentフォルダ内にサイトの中身が入っていれば良い
 
@@ -109,7 +130,6 @@ Obsidianからならおすすめは３
 > シンボリックリンクはディレクトリの位置をPCに誤認させるだけで中のファイルは認識できないので、基本的にgitで管理することはできない  
 > Quartzのようなシンボリックリンクに対応したプログラムのみで使用できる 
 
-
 私の場合はiCloudでObsidianを同期しているのでiCloudDriveのVault内のPublishフォルダを参照している
 ※iCloudのファイルパスの指定ではスペースにバックスラッシュを入れないといけないという落とし穴があるので別途ぐぐるべし
 
@@ -124,53 +144,69 @@ Obsidianからならおすすめは３
 # ローカルリポジトリでの操作
 
 ## サイトのカスタマイズ
+
 Quartzではプログラミングがあまり分からなくても
 config.tsやlayout.tsファイルを編集したら色々いじれるようになっている
 
 ぱっと見有用そうなものは以下
+
 ### ページタイトルを書き換える
+
 config.tsを書き換える
+
 ```
 pageTitle:"砂の書庫"
 ```
 
 ### 改行を認識する
+
 defaultでは改行が普通のWebサイトの作り方と同様で２回改行でようやく改行と認識されるので、１回の改行で改行と認識されるように設定
 config.tsのtransformerの欄にこれを追加する
+
 ```
 Plugin.HardLineBreaks(),
 ```
 
 ### Table of Contentsを表示する
+
 layoutの好きなところに、例えばbefore bodyに
+
 ```
 Component.TableOfContents(),
 ```
+
 これを追加すると目次が自動生成される
 
 ### Recent noteを追加する
 
 最近書いた記事リストを表示する
 layout.tsの好きなところに以下を追加する
+
 ```
 Component.RecentNotes()
 ```
+
 defaultではoffなので、例えばbacklinkなどの代わりに入れるなど
+
 ### その他
+
 かなりいじれるそうだが公式ドキュメントを参照
 [Welcome to Quartz 4](https://quartz.jzhao.xyz)
 
 ## ローカル環境でテスト
 
 ローカル環境でサイトを構築する
+
 ```zsh
 cd /Users/masaki/Documents/GitHub/masaki39.github.io
 npx quartz build --serve
 ```
+
 ローカルリポジトリに移動してからlocal hostのコマンドを入力する
 cdコマンドでローカルリポジトリへの絶対パスを書いてどっかに保存しておくと次回からコピペで良くなる
 
 サイトを開く
+
 ```zsh
 open http://localhost:8080
 ```
@@ -188,6 +224,7 @@ GitHubPagesを使用するためにはデプロイの設定ファイルdeploy.ym
 
 作成場所はローカルリポジトリの.github/workflowsディレクトリ
 名前はdeploy.ymlで、中身は公式サイトからのコピペで良くて、下記の通り
+
 ```
 name: Deploy Quartz site to GitHub Pages
  
@@ -245,20 +282,24 @@ jobs:
 これで同期コマンドを打つとサイトをdeployできるようになった
 
 設定完了！！
+
 # 同期コマンド
 
 最後にローカルリポジトリのディレクトリからこのコマンドを打ち込んで同期する
+
 ```
 npx quartz sync
 ```
 
 これはコピペ用
+
 ```
 cd /Users/masaki/Documents/GitHub/masaki39.github.io
 npx quartz sync
 sleep 3
 open https://masaki39.github.io
 ```
+
 ディレクトリ移動とサイト開くのもセットでターミナルで実行できる
 若干サイト構築に時間がかかるので、必要に応じて更新して確認する
 

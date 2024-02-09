@@ -1,11 +1,13 @@
 ---
+date: 2024-01-19
+updated: 2024-02-09
 aliases: 
 tags:
   - obsidian
   - obsidian/plugin
   - publish
-created: 2024-01-19
-updated: 2024-02-05
+title: 
+description:
 ---
 
 # はじめに
