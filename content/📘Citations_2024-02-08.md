@@ -3,14 +3,14 @@ created: 2023-07-05
 date: 2023-07-05
 updated: 2024-02-09
 aliases:
- - 📘Citationsのテンプレを更新する
+  - 📘Citationsのテンプレを更新する
 tags:
   - obsidian
   - obsidian/plugin
   - citations
   - python
   - article
-title: Citationsのテンプレを更新する
+title: 📘Citationsのテンプレを更新する
 description:
 ---
 
