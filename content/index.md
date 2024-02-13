@@ -30,3 +30,5 @@ enableToc: false
 - [[📘Dataviewを使い込む]]
 - [[📘Self-hosted LiveSyncの初期設定]]
 - [[📘TemplaterのExample Usage]]
+
+[[📘Templaterでフロントマターを書き換える]]
