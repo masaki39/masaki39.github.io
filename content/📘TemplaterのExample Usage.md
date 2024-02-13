@@ -6,9 +6,7 @@ tags:
   - obsidian
   - obsidian/plugin
   - templater
-  - publish
-title: 
-description:
+  - article
 ---
 
 # はじめに
@@ -254,4 +252,4 @@ tp.系と組み合わせて最強のTemplateを作ろう(かなり高難易度..
 
 > [!seealso] seealso
 > 
-> [[Templaterでフロントマターを書き換える]]
+> [[📘Templaterでフロントマターを書き換える]]
