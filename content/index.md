@@ -24,11 +24,9 @@ enableToc: false
 
 - [[📘Citations_2024-02-08|📘Citationsのテンプレを更新する]]
 - [[📘Zotero×Obsidian 文献管理のすゝめ]]
-- [[Templaterでフロントマターを書き換える]]
+- [[Templaterでフロントマターを書き換える|📘Templaterでフロントマターを書き換える]] 
 - [[📘Dataviewの使い方]]
-- [[📘Quartz4で無料でObsidian Publishを代替する]]
+- [[Quartz4で無料でObsidian Publishを代替する|📘Quartz4で無料でObsidian Publishを代替する]] 
 - [[📘Dataviewを使い込む]]
 - [[📘Self-hosted LiveSyncの初期設定]]
 - [[📘TemplaterのExample Usage]]
-
-[[Templaterでフロントマターを書き換える]]

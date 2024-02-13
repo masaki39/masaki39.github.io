@@ -1,13 +1,14 @@
 ---
 date: 2023-12-12
 updated: 2024-02-13
-aliases: []
+aliases:
+  - 📘Templaterでフロントマターを書き換える
 tags:
   - obsidian
   - obsidian/plugin
   - templater
   - article
-cssclasses: 
+cssclasses:
 ---
 
 # Templater プラグインについて

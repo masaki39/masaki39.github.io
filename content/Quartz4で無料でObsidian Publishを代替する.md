@@ -1,14 +1,15 @@
 ---
 date: 2023-12-13
 updated: 2024-02-13
-aliases: []
+aliases:
+  - 📘Quartz4で無料でObsidian Publishを代替する
 tags:
   - obsidian
   - quartz
   - article
 cssclasses: 
 title: 
-description: 
+description:
 ---
 
 # はじめに
