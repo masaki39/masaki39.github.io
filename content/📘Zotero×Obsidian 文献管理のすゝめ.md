@@ -320,7 +320,7 @@ Obsidian の売りは自由度の高さにある
 > [!info] ~~2023-12-06 追記~~
 > ~~Citations プラグインで authors が分割されない問題を Templater で解決してみた記事~~
 > ~~First author を抽出したいなら~~
-> [📘Templaterでフロントマターを書き換える](📘Templaterでフロントマターを書き換える.md)
+> [Templaterでフロントマターを書き換える](Templaterでフロントマターを書き換える.md)
 >
 > > [!info] 2024-02-05 追記
 > > authors の前後に [] を書くだけで配列として認識されることに気がついた
