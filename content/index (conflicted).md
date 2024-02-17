@@ -23,11 +23,10 @@ enableToc: false
 # 記事一覧 (作成日順)
 
 - [[Citations_2024-02-08|📘Citationsのテンプレを更新する]]
-- [[Zotero×Obsidian 文献管理のすゝめ|📘Zotero×Obsidian 文献管理のすゝめ]] 
+- [[Zotero×Obsidian 文献管理のすゝめ]]
 - [[Templaterでフロントマターを書き換える|📘Templaterでフロントマターを書き換える]] 
-- [[Dataviewの使い方|📘Dataviewの使い方]] 
+- [[Dataviewの使い方]]
 - [[Quartz4で無料でObsidian Publishを代替する|📘Quartz4で無料でObsidian Publishを代替する]] 
-- [[Dataviewを使い込む|📘Dataviewを使い込む]] 
-- [[Self-hosted LiveSyncの初期設定|📘Self-hosted LiveSyncの初期設定]] 
-- [[TemplaterのExample Usage|📘TemplaterのExample Usage]] 
-- [[現在のDaily Noteの使い方|📘現在のDaily Noteの使い方]] 
+- [[Dataviewを使い込む]]
+- [[Self-hosted LiveSyncの初期設定]]
+- [[TemplaterのExample Usage]]

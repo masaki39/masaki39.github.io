@@ -6,7 +6,7 @@ aliases:
 tags:
   - obsidian
   - quartz
-  - article
+  - note/article
 cssclasses: 
 title: 
 description:

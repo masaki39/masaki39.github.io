@@ -1,13 +1,15 @@
 ---
 date: 2023-12-12
 updated: 2024-02-14
-aliases: 
+aliases:
+  - 📘Dataviewの使い方
 tags:
   - obsidian
   - obsidian/plugin
   - dataview
-  - article
-cssclasses:
+  - note/article
+cssclasses: 
+title: 📘Dataviewの使い方
 ---
 
 # はじめに
@@ -44,7 +46,7 @@ sort tags asc, year desc
 ```
 
 これは私が現在使用している文献管理用のテンプレ
-文献管理については別記事にて解説→[[📘Zotero×Obsidian 文献管理のすゝめ]]
+文献管理については別記事にて解説→[[Zotero×Obsidian 文献管理のすゝめ]]
 First Author の抽出についても別記事にて解説→[[Templaterでフロントマターを書き換える]]
 tags でなんとなく分類して、comment に一言コメントを追加するようにしている
 
@@ -365,7 +367,7 @@ group by ""
 
 # Advanced Usage
 
-ちょっと複雑だが有用そうな使用例を別記事にまとめた→[[📘Dataviewを使い込む]]
+ちょっと複雑だが有用そうな使用例を別記事にまとめた→[[Dataviewを使い込む]]
 
 また、設定で dataviewjs を on にすると javascript を組み込めるようになるのでプログラミングに精通している場合は大体なんでもできるようになりそう
 

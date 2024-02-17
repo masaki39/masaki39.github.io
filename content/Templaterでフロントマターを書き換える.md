@@ -7,7 +7,7 @@ tags:
   - obsidian
   - obsidian/plugin
   - templater
-  - article
+  - note/article
 cssclasses:
 ---
 
@@ -139,7 +139,7 @@ authors:
 
 無事分割できた
 分割できると、個別に指定することができるので dataview で扱える
-詳細な使い方は別記事→　[[📘Dataviewの使い方]]
+詳細な使い方は別記事→　[[Dataviewの使い方]]
 
 例えば
 
@@ -158,4 +158,4 @@ dataview でこう指定しておくと、筆頭著者が "tanaka" のノート�
 # 参考サイト
 
 [Introduction - Templater](https://silentvoid13.github.io/Templater/introduction.html)
-[Issue using app.fileManager.processFrontmatter - Developers & API - Obsidian Forum](https://forum.obsidian.md/t/issue-using-app-filemanager-processfrontmatter/51233/6)
+[Issue using app.fileManager.processFrontmatter - Developers & API - Obsidian Forum](https://forum.obsidian.md/t/issue-using-app-filemanager-processfrontmatter/51233

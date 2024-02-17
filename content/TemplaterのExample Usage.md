@@ -1,12 +1,14 @@
 ---
 date: 2024-02-03
 updated: 2024-02-09
-aliases: 
+aliases:
+  - 📘TemplaterのExample Usage
 tags:
   - obsidian
   - obsidian/plugin
   - templater
-  - article
+  - note/article
+title: 📘TemplaterのExample Usage
 ---
 
 # はじめに

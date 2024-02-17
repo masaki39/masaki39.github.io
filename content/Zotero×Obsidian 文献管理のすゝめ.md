@@ -1,16 +1,17 @@
 ---
 date: 2023-10-02
 updated: 2024-02-13
-aliases: []
+aliases:
+  - 📘Zotero×Obsidian 文献管理のすゝめ
 tags:
   - obsidian
   - zotero
   - citations
   - dataview
-  - article
+  - note/article
 cssclasses: 
-title: 
-description: 
+title: 📘Zotero×Obsidian 文献管理のすゝめ
+description:
 ---
 
 # はじめに
@@ -333,7 +334,7 @@ Obsidian の売りは自由度の高さにある
 使用方法は別記事に記載
 
 > [!seealso] Seealso
-> [[📘Dataviewの使い方]]
+> [[Dataviewの使い方]]
 
 dataview を使用して、抽出したい table を設定したら完成
 
@@ -369,7 +370,7 @@ Zotero の同期に WebDAV を使用する
 > [!info] 2024-02-05 追記
 > より良い同期を求めて Self-hosted LiveSync に移行した
 > 設定難易度はかなり高いが、やる価値あり
-> [[📘Self-hosted LiveSyncの初期設定]]
+> [[Self-hosted LiveSyncの初期設定]]
 
 # 最後に
 

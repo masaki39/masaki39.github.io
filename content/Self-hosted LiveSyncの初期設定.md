@@ -1,12 +1,14 @@
 ---
 date: 2024-01-19
 updated: 2024-02-14
-aliases: 
+aliases:
+  - 📘Self-hosted LiveSyncの初期設定
 tags:
   - obsidian
   - obsidian/plugin
-  - article
-cssclasses:
+  - note/article
+cssclasses: 
+title: 📘Self-hosted LiveSyncの初期設定
 ---
 
 # はじめに

@@ -9,7 +9,7 @@ tags:
   - obsidian/plugin
   - citations
   - python
-  - article
+  - note/article
 title: 📘Citationsのテンプレを更新する
 description:
 ---
@@ -31,7 +31,7 @@ JSON-->|Citations|Obsidian
 全体のワークフローは別記事にて
 
 > [!seealso] Seealso
-> [[📘Zotero×Obsidian 文献管理のすゝめ]]
+> [[Zotero×Obsidian 文献管理のすゝめ]]
 
 # テンプレート
 
