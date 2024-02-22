@@ -31,3 +31,4 @@ enableToc: false
 - [[Self-hosted LiveSyncの初期設定|📘Self-hosted LiveSyncの初期設定]] 
 - [[TemplaterのExample Usage|📘TemplaterのExample Usage]] 
 - [[現在のDaily Noteの使い方|📘現在のDaily Noteの使い方]] 
+- [[購入したUSB-Cハブモニターが素晴らしかった話|📘購入したUSB-Cハブモニターが素晴らしかった話]]
