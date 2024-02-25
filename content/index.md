@@ -32,4 +32,4 @@ enableToc: false
 - [[TemplaterのExample Usage|📘TemplaterのExample Usage]] 
 - [[現在のDaily Noteの使い方|📘現在のDaily Noteの使い方]] 
 - [[購入したUSB-Cハブモニターが素晴らしかった話|📘購入したUSB-Cハブモニターが素晴らしかった話]]
-- [[📘Templaterの普段使いテンプレートを再作成]]
+- [[Templaterの普段使いテンプレートを再作成|📘Templaterの普段使いテンプレートを再作成]]
