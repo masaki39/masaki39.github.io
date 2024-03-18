@@ -36,7 +36,7 @@ if (!text) {
 lines.forEach((line, index) => {
 	if (line.startsWith(text)){
 		app.workspace.activeLeaf.view.editor.setCursor(index, 0);
-		app.commands.executeCommandById(`obsidian-outliner:fold`);
+		app.commands.executeCommandById(`editor:fold-more`);
 	}
 });
 ```
@@ -115,6 +115,9 @@ lines.forEach((line, index) => {
 これは全ての行で outliner の `unfold the list` コマンドを実行する脳筋スクリプト
 畳まれたバレットリストが全て一気に展開される
 
+これ書いてから思ったけど普通にコマンドパレットに `すべての見出しとリストのフォールドを解除` っていう項目があった
+全ての行に同じ処理をするテンプレートにはなりそう
+
 # おわりに
 
 改行で分割してリスト化→繰り返し処理という構造はかなり自由度高い
@@ -122,4 +125,7 @@ lines.forEach((line, index) => {
 `app.commands.executeCommandById` からコマンドパレットを実行するのも便利
 
 今回は最近仕入れた知識を組み合わせた集合体みたいなスクリプトで、新規で調査する必要はなかった
+条件を少しいじれば header の fold もできるし、on/off のボタンを作ることも可能である
+もし必要性を感じたら今日のスクリプトをベースに作ってみよう
+
 ちょっと Obsidian ガチ勢に片足突っ込んでいるかもしれない
