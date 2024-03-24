@@ -1,14 +1,12 @@
 ---
 date: 2023-12-12
-updated: 2024-02-14
+updated: 2024-03-25
 aliases:
   - サイト
 tags:
   - obsidian
   - quartz
-cssclasses: 
 title: Home
-description: 
 enableToc: false
 ---
 
@@ -19,6 +17,12 @@ enableToc: false
 > メモアプリ Obsidian のノートの一部を公開しています
 > サイト名の " 砂の書庫 " は砂場遊びが大好きな息子 (2 才) に由来
 > 内容の正確性は保証しません
+
+> [!important] 2024-03-25 設定済みVaultの配布を始めました
+> 設定が難しいObsidian を手軽に学術活動に使用できます
+> [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
+> 勇者ヒンメルがそうしたように少額ですが有料です
+> このサイトに書いてあることを自分で落とし込める方には不要です
 
 # 記事一覧 (作成日順)
 

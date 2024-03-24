@@ -153,7 +153,7 @@ import re # 正規表現モジュール
 json_file_path = '/content/drive/MyDrive/マイ・ライブラリ.json'
 
 # マークダウンファイルがあるディレクトリのパス
-markdown_dir_path = '/content/drive/MyDrive/05_Zotero sync'
+markdown_dir_path = '/content/drive/MyDrive/Literatures'
 
 # JSONファイルを読み込む
 with open(json_file_path, 'r', encoding='utf-8') as json_file:
