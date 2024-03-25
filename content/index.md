@@ -21,7 +21,6 @@ enableToc: false
 > [!important] 2024-03-25 設定済みVaultの配布を始めました
 > 設定が難しいObsidian を手軽に学術活動に使用できます
 > [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
-> 勇者ヒンメルがそうしたように少額ですが有料です
 > このサイトに書いてあることを自分で落とし込める方には不要です
 
 # 記事一覧 (作成日順)
