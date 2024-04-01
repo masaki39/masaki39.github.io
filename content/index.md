@@ -40,3 +40,4 @@ enableToc: false
 - [[Templaterでブックマークメニューを作成|📘Templaterでブックマークメニューを作成]]
 - [[アウトラインで英文を書く|📘アウトラインで英文を書く]]
 - [[Templaterでoutlinerを強化|📘Templaterでoutlinerを強化]]
+- [[Templaterの結果を特定のセクションに出力|📘Templaterの結果を特定のセクションに出力]]
