@@ -1,10 +1,11 @@
 ---
 date: 2024-04-06
 updated: 2024-04-06
-aliases: []
+aliases:
+  - 📘ObsidianでBibliography付き文書を作成
 tags:
   - note/article
-title: 
+title: 📘ObsidianでBibliography付き文書を作成
 ---
 
 # はじめに
