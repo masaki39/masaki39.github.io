@@ -13,6 +13,11 @@ cssclasses:
 title: 📘Zotero×Obsidian 文献管理のすゝめ
 description:
 ---
+> [!important] お知らせ
+> 2024-03-25~ Obsidianの設定済みVaultの配布を始めました
+> [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
+> 文献管理と論文執筆用にカスタマイズされています
+> ダウンロードしたVaultをObsidianで開き、必要なプラグインのインストールなどの簡単な初期設定のみで使用可能です
 
 # はじめに
 
