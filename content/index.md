@@ -1,6 +1,6 @@
 ---
 date: 2023-12-12
-updated: 2024-03-25
+updated: 2024-04-12
 aliases:
   - サイト
 tags:
@@ -18,8 +18,8 @@ enableToc: false
 > サイト名の " 砂の書庫 " は砂場遊びが大好きな息子 (2 才) に由来
 > 内容の正確性は保証しません
 
-> [!important] 2024-03-25 設定済みVaultの配布を始めました
-> 設定が難しいObsidian を手軽に学術活動に使用できます
+> [!important] 2024-03-25 設定済み Vault の配布を始めました
+> 設定が難しい Obsidian を手軽に学術活動に使用できます
 > [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
 > このサイトに書いてあることを自分で落とし込める方には不要です
 
@@ -42,3 +42,5 @@ enableToc: false
 - [[Templaterでoutlinerを強化|📘Templaterでoutlinerを強化]]
 - [[Templaterの結果を特定のセクションに出力|📘Templaterの結果を特定のセクションに出力]]
 - [[ObsidianでBibliography付き文書を作成|📘ObsidianでBibliography付き文書を作成]]
+- [[Obsidianのコミュニティプラグインを作ってみた|📘Obsidianのコミュニティプラグインを作ってみた]]
+
