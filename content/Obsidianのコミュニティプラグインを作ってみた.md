@@ -130,8 +130,6 @@ this.outputToSection(editor, lines, this.settings.sectionName, result);
 リポジトリ↓↓
 [GitHub - masaki39/outline-converter: Convert outline to continuous text.](https://github.com/masaki39/outline-converter)
 
-<iframe src=https://github.com/masaki39/outline-converter></iframe>
-
 公開はされていないが、BRAT でβ版としてインストールできる
 URL↓入れたら一応コミュニティプラグインとして入れれるようになった
 
