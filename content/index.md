@@ -43,4 +43,5 @@ enableToc: false
 - [[Templaterの結果を特定のセクションに出力|📘Templaterの結果を特定のセクションに出力]]
 - [[ObsidianでBibliography付き文書を作成|📘ObsidianでBibliography付き文書を作成]]
 - [[Obsidianのコミュニティプラグインを作ってみた|📘Obsidianのコミュニティプラグインを作ってみた]]
-- [[Zotero×Obsidian 学術活動のすゝめ|📘Zotero×Obsidian 学術活動のすゝめ]]
+- [[Zotero×Obsidian 学術活動のすゝめ|📘Zotero×Obsidian 学術活動のすゝめ]] 
+- [[TemplaterでOutlinerを強化(2)|📘TemplaterでOutlinerを強化(2)]] 
