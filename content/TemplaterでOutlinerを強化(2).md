@@ -6,6 +6,7 @@ aliases:
 tags:
   - note/article
 title: 📘TemplaterでOutlinerを強化(2)
+ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2019.09.25%20-%20A%20digital%20workspace%20enhanced%20by%20templater%20software%20for%20outliners%2C%20featuring%20a%20large%20computer%20monitor%20at%20the%20center%20displaying%20a%20complex%20outline%20projec.webp
 ---
 
 # はじめに 
