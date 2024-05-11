@@ -14,6 +14,8 @@ title: 📘Zotero×Obsidian 文献管理のすゝめ
 ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg
 ---
 
+![DALL·E 2024-05-11 20.44.50 - A visually appealing OGP image for a blog post titled 'Zotero × Obsidian for Literature Management'. The image should depict a digital workspace featu.jpg (1200×675)](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg)
+
 > [!important] お知らせ
 > 2024-03-25~ Obsidianの設定済みVaultの配布を始めました
 > [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
