@@ -1,9 +1,10 @@
 ---
 date: 2024-05-04
 updated: 2024-05-04
-aliases: []
+aliases: 
 tags:
   - note/article
+ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/Resized_Software_Engineer_Obsidian_Dataview.png
 ---
 
 # はじめに

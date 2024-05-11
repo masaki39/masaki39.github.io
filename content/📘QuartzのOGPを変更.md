@@ -1,11 +1,12 @@
 ---
 date: 2024-05-11
 updated: 2024-05-11
-aliases: 
+aliases: []
 tags:
   - note/article
   - quartz
 ---
+
 %%
 - はじめに
 	- このサイトは Obsidian で作成したページを Quartz で公開している。
@@ -27,7 +28,6 @@ tags:
 		- 2. `quartz.config.ts` にサイトのホームページの Url を入力する。
 - おわりに
 	- OGP が変更できた。
-	- 
 
 {{s:code1}}
 
@@ -39,6 +39,7 @@ const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 {{e:code1}}
 
 # Output
+
 %%
 
 ## はじめに
@@ -63,7 +64,6 @@ const ogImagePath = `https://${cfg.baseUrl}/static/og-image.png`
 ### 方法まとめ
 
 1. `/quartz/static/og-image.png` に OGP を入れる保存する。
-
 2. `quartz.config.ts` にサイトのホームページの Url を入力する。
 
 ## おわりに
