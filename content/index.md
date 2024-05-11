@@ -46,4 +46,4 @@ enableToc: false
 - [[Zotero×Obsidian 学術活動のすゝめ|📘Zotero×Obsidian 学術活動のすゝめ]] 
 - [[TemplaterでOutlinerを強化(2)|📘TemplaterでOutlinerを強化(2)]] 
 - [[📘Dataviewをプロパティで操作]] 
-- [[📘QuartzのOGPを変更]]
+- [[📘QuartzのOGPを変更]] 
