@@ -47,3 +47,4 @@ enableToc: false
 - [[TemplaterでOutlinerを強化(2)|📘TemplaterでOutlinerを強化(2)]] 
 - [[📘Dataviewをプロパティで操作]] 
 - [[📘QuartzのOGPを変更]] 
+- [[📘Obsidianを一年使用して]] 
