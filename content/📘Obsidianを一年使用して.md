@@ -1,11 +1,10 @@
 ---
 date: 2024-05-11
 updated: 2024-05-12
-aliases: []
+aliases: 
 tags:
   - note/article
-  - note/prime
-ogp: "https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-12%2022.01.04%20-%20A%20wide%20illustration%20depicting%20the%20concept%20of%20using%20the%20software%20'Obsidian'%20for%20one%20year.%20The%20image%20shows%20a%20person%20sitting%20at%20a%20desk%20in%20a%20cozy%2C%20well-li.jpg"
+ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-12%2022.01.04%20-%20A%20wide%20illustration%20depicting%20the%20concept%20of%20using%20the%20software%20'Obsidian'%20for%20one%20year.%20The%20image%20shows%20a%20person%20sitting%20at%20a%20desk%20in%20a%20cozy%2C%20well-li.jpg
 ---
 
 ![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-12%2022.01.04%20-%20A%20wide%20illustration%20depicting%20the%20concept%20of%20using%20the%20software%20'Obsidian'%20for%20one%20year.%20The%20image%20shows%20a%20person%20sitting%20at%20a%20desk%20in%20a%20cozy%2C%20well-li.jpg)
