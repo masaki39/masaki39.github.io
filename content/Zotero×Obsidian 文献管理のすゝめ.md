@@ -1,6 +1,6 @@
 ---
 date: 2023-10-02
-updated: 2024-02-13
+updated: 2024-05-15
 aliases:
   - 📘Zotero×Obsidian 文献管理のすゝめ
 tags:
@@ -11,16 +11,16 @@ tags:
   - note/article
 cssclasses: 
 title: 📘Zotero×Obsidian 文献管理のすゝめ
-ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg
+ogp: "https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg"
 ---
 
 ![DALL·E 2024-05-11 20.44.50 - A visually appealing OGP image for a blog post titled 'Zotero × Obsidian for Literature Management'. The image should depict a digital workspace featu.jpg (1200×675)](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg)
 
 > [!important] お知らせ
-> 2024-03-25~ Obsidianの設定済みVaultの配布を始めました
+> 2024-03-25~ Obsidian の設定済み Vault の配布を始めました
 > [Marvelous Academic Research System](https://masa21gifus.gumroad.com/l/ucwfc)
 > 文献管理と論文執筆用にカスタマイズされています
-> ダウンロードしたVaultをObsidianで開き、必要なプラグインのインストールなどの簡単な初期設定のみで使用可能です
+> ダウンロードした Vault を Obsidian で開き、必要なプラグインのインストールなどの簡単な初期設定のみで使用可能です
 
 # はじめに
 

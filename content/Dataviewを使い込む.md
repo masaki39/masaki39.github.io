@@ -1,6 +1,6 @@
 ---
 date: 2023-12-16
-updated: 2024-02-14
+updated: 2024-05-15
 aliases:
   - 📘Dataviewを使い込む
 tags:

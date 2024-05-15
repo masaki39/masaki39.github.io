@@ -1,6 +1,6 @@
 ---
 date: 2024-02-17
-updated: 2024-02-18
+updated: 2024-05-15
 aliases:
   - 📘現在のDaily Noteの使い方
 tags:
