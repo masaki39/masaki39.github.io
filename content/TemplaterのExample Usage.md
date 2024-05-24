@@ -1,6 +1,6 @@
 ---
 date: 2024-02-03
-updated: 2024-02-09
+updated: 2024-05-19
 aliases:
   - 📘TemplaterのExample Usage
 tags:
@@ -13,22 +13,22 @@ title: 📘TemplaterのExample Usage
 
 # はじめに
 
-TemplaterはTemplateにJavaScriptのcodeを埋め込めるコミュニティプラグインである
+Templater は Template に JavaScript の code を埋め込めるコミュニティプラグインである
 日付関係の動的な情報を取得したり、ファイルやフロントマターの情報を取得・編集することができ、更にこれを**ホットキーに登録できる**
 つまり、ファイルやフロントマターの編集さえをもホットキーで行えるようになるので、使いこなせばかなり広範囲に活躍できる
 
-汎用性が高い一面、JavaScriptの記述方法に乗っ取らないといけないので、難しい一面もある
-Templaterに備え付けのtp.系のmoduleを使用するのは割りと簡単で、使い方は結局公式ドキュメントが強い
+汎用性が高い一面、JavaScript の記述方法に乗っ取らないといけないので、難しい一面もある
+Templater に備え付けの tp.系の module を使用するのは割りと簡単で、使い方は結局公式ドキュメントが強い
 
 > [!cite] 公式ドキュメント
 > [Introduction - Templater](https://silentvoid13.github.io/Templater/)
 
-# tp.date系
+# tp.date 系
 
 これは日付情報を取得するコードの系統のよう
-Daily Noteとの親和性が高そう
+Daily Note との親和性が高そう
 
-公式ドキュメントに記載のExample↓↓
+公式ドキュメントに記載の Example↓↓
 
 ```
 // Date now
@@ -69,7 +69,7 @@ Daily Noteとの親和性が高そう
 ```
 
 割りとシンプルなルール
-tp.date.nowの場合
+tp.date.now の場合
 
 ```
 <% tp.date.now("出力する日付のフォーマット", リファレンスの日付との差, リファレンス, "リファレンスの日付のフォーマット") %>
@@ -79,25 +79,25 @@ tp.date.nowの場合
 
 日付のフォーマットはここを参照→[Moment.js | Docs](https://momentjs.com/docs/#/displaying/format/)
 
-このルールに従いDaily NoteからCalendar PluginのWeekly Noteへのリンクを書いてみる
+このルールに従い Daily Note から Calendar Plugin の Weekly Note へのリンクを書いてみる
 
 ```
 [[<% tp.date.now("YYYY-[W]ww", 0, tp.file.title, "YYYY-MM-DD") %>]]
 ```
 
-このコードはDaily Noteのタイトルから`YYYY-MM-DD`形式で日付情報を取得し、その日付情報から`YYYY-[W]ww`形式で日付を出力する
+このコードは Daily Note のタイトルから `YYYY-MM-DD` 形式で日付情報を取得し、その日付情報から `YYYY-[W]ww` 形式で日付を出力する
 
-Daily Noteのタイトルから曜日を取得する
+Daily Note のタイトルから曜日を取得する
 
 ```
 <% tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD") %>
 ```
 
-曜日情報を基にWeekly NoteからDaily Noteへの紐づけなどができそう
+曜日情報を基に Weekly Note から Daily Note への紐づけなどができそう
 
-# tp.file系
+# tp.file 系
 
-公式ドキュメントに記載のExample↓↓
+公式ドキュメントに記載の Example↓↓
 
 ```
 // Retrieve file content
@@ -186,7 +186,7 @@ Daily Noteのタイトルから曜日を取得する
 これは結構レベル高い
 ファイルから情報を抜いたり、新規に作ったり、編集したりできるっぽいが、今の所有効な使い方は思いつかない
 
-Daily Noteで
+Daily Note で
 
 ```
 <% tp.file.title %>
@@ -194,42 +194,42 @@ Daily Noteで
 
 が日付情報になるので使えるというくらいか
 
-Monthly Noteや四半期のNoteを作る場合はtp.dateとの組み合わせで実現できそう
-Periodic Noteでいい話かもしれないが、多分こっちのほうがカスタマイズ性は高い
+Monthly Note や四半期の Note を作る場合は tp.date との組み合わせで実現できそう
+Periodic Note でいい話かもしれないが、多分こっちのほうがカスタマイズ性は高い
 
-# tp.frontmatter系
+# tp.frontmatter 系
 
 これは公式ドキュメントにはちょっとしか書いてない
 
-フロントマターのkey名から情報を取得する
-↓はkey名が`alias`と`note type`の場合
+フロントマターの key 名から情報を取得する
+↓は key 名が `alias` と `note type` の場合
 
 ```
 <% tp.frontmatter.alias %>
 <% tp.frontmatter["note type"] %>
 ```
 
-↓はkey名が`categories`で中に複数の情報がリスト表示されている場合
+↓は key 名が `categories` で中に複数の情報がリスト表示されている場合
 
 ```
 <% tp.frontmatter.categories.map(prop => `  - "${prop}"`).join("\n") %>
 ```
 
-# その他のtp.系
+# その他の tp.系
 
-tp.hooksは指定した作業を後に遅らせることができるので、例えばTemplaterでフロントマターを記入して、その取得した情報を基にノートを記載するなど、2段階の作業を1個のコードでまとめられる
+tp.hooks は指定した作業を後に遅らせることができるので、例えば Templater でフロントマターを記入して、その取得した情報を基にノートを記載するなど、2 段階の作業を 1 個のコードでまとめられる
 
-tp.systemはクリップボードの情報を取得したり、プロンプトボックスを出現させたりする　Templateを使用する際に入力画面を一回挟みたいときに有用
+tp.system はクリップボードの情報を取得したり、プロンプトボックスを出現させたりする　Template を使用する際に入力画面を一回挟みたいときに有用
 
-tp.obsidianはobsidianAPIが使える
+tp.obsidian は obsidianAPI が使える
 ちょっと何が使えるかは把握していないが、沼の予感がする
 
-tp.webはweb上のサービスと連携
-exampleにはランダムの画像を表示するコードが書いてある
+tp.web は web 上のサービスと連携
+example にはランダムの画像を表示するコードが書いてある
 
 # JavaScript
 
-tp.から始まるコードはTemplaterの機能として搭載されたmoduleであるが、`*`を足すことで一般的なJavaScriptのコードを自在に実行できる
+tp.から始まるコードは Templater の機能として搭載された module であるが、`*` を足すことで一般的な JavaScript のコードを自在に実行できる
 
 ```
 <%* JavaScriptのコード  %>
@@ -248,7 +248,7 @@ tp.から始まるコードはTemplaterの機能として搭載されたmodule�
 %>
 ```
 
-tp.系と組み合わせて最強のTemplateを作ろう(かなり高難易度...)
+tp.系と組み合わせて最強の Template を作ろう (かなり高難易度...)
 
 フロントマターの書き換えに関しては以前の記事を参照
 
