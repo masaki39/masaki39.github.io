@@ -1,13 +1,13 @@
 ---
 date: 2023-12-12
-updated: 2024-02-14
+updated: 2024-05-28
 aliases:
   - 📘Dataviewの使い方
 tags:
-  - obsidian
-  - obsidian/plugin
   - dataview
   - note/article
+  - obsidian
+  - obsidian/plugin
 cssclasses: 
 title: 📘Dataviewの使い方
 ---
