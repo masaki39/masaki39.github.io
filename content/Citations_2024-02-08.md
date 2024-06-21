@@ -1,5 +1,4 @@
 ---
-created: 2023-07-05
 date: 2023-07-05
 updated: 2024-02-09
 aliases:

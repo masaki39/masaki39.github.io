@@ -1,6 +1,6 @@
 ---
 date: 2024-06-02
-updated: 2024-06-02
+updated: 2024-06-19
 aliases: []
 tags:
   - note/article
