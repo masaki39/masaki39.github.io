@@ -6,16 +6,16 @@ tags:
   - note/article
 ---
 
-Obsidianでローカルファイルへのパスを貼る方法です。
+Obsidian でローカルファイルへのパスを貼る方法です。
 
 # 先に結論
 
-- Macの場合は`⌥`を押しながらファイルorフォルダをドラッグ&ドロップ
-- Windowsの場合は`ctrl`を押しながらファイルorフォルダをドラッグ&ドロップ
+- Mac の場合は `⌥` を押しながらファイル or フォルダをドラッグ&ドロップ
+- Windows の場合は `ctrl` を押しながらファイル or フォルダをドラッグ&ドロップ
 
 # 背景
 
-ローカルファイルリンクはMacの場合は下記の形式で書く必要があります。
+ローカルファイルリンクは Mac の場合は下記の形式で書く必要があります。
 
 ```
 [ファイル・フォルダ名](<file:///フルパス>)
@@ -23,7 +23,7 @@ Obsidianでローカルファイルへのパスを貼る方法です。
 
 [作業ログ｜Obsidianで便利なローカルファイルへのリンクを、Automatorに作成してもらうと楽ちんだなあ #MacOSX - Qiita](https://qiita.com/hann-solo/items/5537e54704db48696f80)
 
-今まで私は上記ページを参考にTemplaterでローカルファイルパスを作っていました。今日、プラグインもあるなぁとREADMEをみてみたら、｢ドラッグ&ドロップでできるようになったのでこのプラグインはもう必要ない｣と書いてあるのを発見しました...
+今まで私は上記ページを参考に Templater でローカルファイルパスを作っていました。今日、プラグインもあるなぁと README をみてみたら、｢ドラッグ&ドロップでできるようになったのでこのプラグインはもう必要ない｣と書いてあるのを発見しました...
 
 [MichalBures/obsidian-file-path-to-uri: Convert file path to uri for easier use of links to local files outside of Obsidian](https://github.com/MichalBures/obsidian-file-path-to-uri)
 
