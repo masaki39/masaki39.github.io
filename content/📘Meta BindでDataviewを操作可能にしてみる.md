@@ -4,6 +4,7 @@ updated: 2024-07-20
 aliases: []
 tags:
   - note/article
+ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/Publish/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-07-20%2020.44.08.png
 ---
 
 # はじめに
