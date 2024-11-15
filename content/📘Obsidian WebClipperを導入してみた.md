@@ -33,7 +33,7 @@ dataview自体のコードは下記で、imageがない場合にダミー画像�
 ```js
 table without id
 dateformat(file.ctime,"yyyy-MM-dd HH:mm:ss") as time,
-choice(image, "!" + elink(image,""), "!" + elink("https://picsum.photos/160/90","")) as image,
+choice(image, "!" + elink(image,""), "!" + elink("https://picsum.photos/seed/" + file.name + "/160/90","")) as image,
 link(file.link, title) as link
 from "Clippings"
 where

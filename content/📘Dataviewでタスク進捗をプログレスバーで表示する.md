@@ -1,8 +1,12 @@
 ---
+date: 2024-11-06
+updated: 2024-11-15
+aliases: []
 tags:
   - note/article
 ogp: https://picsum.photos/id/60/1200/675
 ---
+
 # はじめに
 
 気がついたら前回の投稿からだいぶ時間が空いていた。
