@@ -1,9 +1,10 @@
 ---
 date: 2024-12-04
 updated: 2024-12-04
-aliases: []
+aliases: 
 tags:
   - note/article
+ogp: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/Publish/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-12-04%209.23.57.png
 ---
 
 # はじめに
