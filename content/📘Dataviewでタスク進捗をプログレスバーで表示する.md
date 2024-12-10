@@ -1,6 +1,6 @@
 ---
 date: 2024-11-06
-updated: 2024-11-15
+updated: 2024-12-10
 aliases: []
 tags:
   - note/article
@@ -102,6 +102,12 @@ table
 
 データフォーマットは自由に変えれる。
 
+## Dataviewjsで記載したバージョン(2024-12-10追記)
+
+```js
+`$=dv.fileLink(moment().format("YYYY-MM-DD"))`
+```
+
 ## 本日のデイリーノートのタスク数を取得する
 
 ```js
@@ -117,6 +123,14 @@ table
 ```
 
 合せ技。
+
+## Dataviewjsで記載したバージョン(2024-12-10追記)
+
+```js
+`$="<progress value='" + dv.page(moment().format("YYYY-MM-DD")).file.tasks.filter(t => t.completed === true).length + "' max='" + dv.page(moment().format("YYYY-MM-DD")).file.tasks.length + "'></progress> " + (dv.page(moment().format("YYYY-MM-DD")).file.tasks.length > 0 ? Math.round((dv.page(moment().format("YYYY-MM-DD")).file.tasks.filter(t => t.completed === true).length / dv.page(moment().format("YYYY-MM-DD")).file.tasks.length) * 100) : 0) + "%"`
+```
+
+このほうが自動で更新されて良い感じ。
 
 # おわりに
 
