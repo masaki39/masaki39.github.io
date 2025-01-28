@@ -27,11 +27,11 @@ Templater は Obsidian のコミュニティプラグインの 1 つで
 テンプレートのノートを作成し、適当なテンプレートフォルダに保存、
 その後 Templater の設定からホットキーを追加したいテンプレートを選べる
 
-![Pasted image 20231206080931.png](Pasted%20image%2020231206080931.png)
+![Pasted image 20231206080931.webp](Pasted%20image%2020231206080931.webp)
 
 選んだら、Obsidian のデフォルトの設定から任意のホットキーを設定できる
 
-![Pasted image 20231206081504.png](Pasted%20image%2020231206081504.png)
+![Pasted image 20231206081504.webp](Pasted%20image%2020231206081504.webp)
 
 私はシンプルに Template1 から番号をふっておきホットキーも数字であてがっている
 このようにホットキーでテンプレートをすぐに呼び出すことができる

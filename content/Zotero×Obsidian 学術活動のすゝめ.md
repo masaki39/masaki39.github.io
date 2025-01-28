@@ -35,7 +35,7 @@ title: 📘Zotero×Obsidian 学術活動のすゝめ
 [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/installation/) をまずはインストール
 インストールしたらマイ・ライブラリを右クリック→エクスポート
 
-![Pasted image 20231002225340.png](Pasted%20image%2020231002225340.png)
+![Pasted image 20231002225340.webp](Pasted%20image%2020231002225340.webp)
 
 Better CSL JSON 形式で OK
 次に出力箇所を指定できるので、**Obsidian のフォルダを指定して**出力する

@@ -27,7 +27,7 @@ title: 📘購入したUSB-Cハブモニターが素晴らしかった話
 これ、USB-C を指すだけで充電しながらモニターと繋げてくれる神機能です
 つまり、**家帰ってから充電器を刺さなくてもいい**
 
-![[Publish/PublishImages/Diagram 7.svg]]
+![[Publish/PublishImages/Diagram 7.webp]]
 
 これめっちゃ神
 
@@ -47,7 +47,7 @@ USB-typeA が 4 箇所させますね
 これで特に意識しなくても自動でバックアップも取れて安心できる
 Scanner 繋ぐのも面倒くさくなくなった
 
-![[Diagram 8.svg]]
+![[Publish/PublishImages/Diagram 8.webp]]
 
 # その他
 

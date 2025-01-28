@@ -40,7 +40,7 @@ WHERE deadline >= this.file.day and deadline
 SORT deadline
 ```
 
-![Pasted image 20231216175642.png](Pasted%20image%2020231216175642.png)
+![Pasted image 20231216175642.webp](Pasted%20image%2020231216175642.webp)
 
 > [!warning] 日付の計算について
 > おそらく dataview は日付の計算を想定していない
@@ -115,7 +115,7 @@ Writing:: 0
 ```
 
 こんな感じになるらしい
-![Pasted image 20231216184610.png](Pasted%20image%2020231216184610.png)
+![Pasted image 20231216184610.webp](Pasted%20image%2020231216184610.webp)
 
 要するに function key の choice() を用いて**目標を達成したらマークが変わる**
 

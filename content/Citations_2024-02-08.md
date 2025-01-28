@@ -121,7 +121,7 @@ Google ColaboratoryはGoogleアカウントされあればページを開くだ�
 
 まずGoogleDriveにアップロード
 ~~これだけしかファイル入っていなくて全然GoogleDrive使ってないことが発覚した~~
-![Pasted image 20240208203120.png](Pasted%20image%2020240208203120.png)
+![Pasted image 20240208203120.webp](Pasted%20image%2020240208203120.webp)
 
 ## Google ColaboratoryでGoogle Driveをマウント
 
@@ -279,7 +279,7 @@ markdown2 <-->|citation-key|dictionary2
 > ```
 ```
 
-![[Pasted image 20240208222514.png]]
+![[Pasted image 20240208222514.webp]]
 
 いい感じになった！
 

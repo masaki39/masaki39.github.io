@@ -63,7 +63,7 @@ Pandoc Plugin のドキュメントを確認→[Citations (work in progress) · 
 > [[Zotero×Obsidian 文献管理のすゝめ|📘Zotero×Obsidian 文献管理のすゝめ]] 
 
 以下が Citations プラグインを使用した文献管理概要図だ
-![[Diagram 23.svg]]
+![[Publish/PublishImages/Diagram 23.webp]]
 
 このマイ･ライブラリ.json は CSL-JSON であるので、この絶対パスを設定画面で指定しておく
 
@@ -168,7 +168,7 @@ Output セクションのみを Pandoc で出力するように記載しても�
 
 # 完成したロジック
 
-![[Diagram 24.svg]]
+![[Publish/PublishImages/Diagram 24.webp]]
 
 こういうことですね (分かりにくい)
 
