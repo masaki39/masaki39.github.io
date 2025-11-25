@@ -5,11 +5,27 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.RecentNotes({ title: "Recent writing" , showTags: false, limit: 5, linkToMore: "tags/note"}),
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'masaki39/masaki39.github.io',
+        // from data-repo-id
+        repoId: 'R_kgDON-ip9g',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDON-ip9s4CnRWX',
+      }
+   }),
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/masaki39",
+      Bluesky: "https://bsky.app/profile/masa21gifus.bsky.social",
+      RSS : "https://masaki39.github.io/index.xml",
     },
   }),
 }
