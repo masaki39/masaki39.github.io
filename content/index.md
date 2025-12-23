@@ -16,5 +16,5 @@ socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/og-image.png
 
 > [!note] About
 > メモアプリ Obsidian のノートの一部を公開しています
-> サイト名の " 砂の書庫 " は砂場遊びが大好きな息子 (2 才) に由来
+> サイト名の " 砂の書庫 " は砂場遊びが大好きな息子 (当時2 才) に由来
 > 内容の正確性は保証しません
