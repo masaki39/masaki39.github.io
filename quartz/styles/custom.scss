@@ -1,3 +1,36 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+:root {
+  --header-banner-bg: #e5eef9;
+  --header-banner-text: #0f2e4a;
+  --header-banner-border: #2f7ecb;
+}
+
+:root[saved-theme="dark"] {
+  --header-banner-bg: #1f2a36;
+  --header-banner-text: #e7f0ff;
+  --header-banner-border: #6bb3ff;
+}
+
+/* Simple banner style for in-article headings h1. */
+article.popover-hint h1 {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--header-banner-bg);
+  color: var(--header-banner-text);
+  padding: 0.2rem 0.7rem;
+  border-left: 10px solid var(--header-banner-border);
+  border-right: 5px solid var(--header-banner-border);
+  border-bottom: 3px solid var(--header-banner-border);
+  border-radius: 6px;
+}
+
+article.popover-hint h2 {
+  display: inline-block;
+  background: var(--header-banner-bg);
+  color: var(--header-banner-text);
+  padding: 0.2rem 0.7rem;
+  border-left: 8px solid var(--header-banner-border);
+  border-radius: 6px;
+}
