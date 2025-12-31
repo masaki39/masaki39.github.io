@@ -20,6 +20,7 @@ export const sharedPageComponents: SharedLayout = {
         categoryId: 'DIC_kwDON-ip9s4CnRWX',
       }
    }),
+    Component.AfterBodyWebring(),
   ],
   footer: Component.Footer({
     links: {
