@@ -1,6 +1,6 @@
 ---
 date: 2026-02-07
-updated: 2026-02-07
+updated: 2026-02-09
 aliases: []
 tags:
   - note/publish
@@ -68,6 +68,19 @@ description: Marpスライド作成支援ツールMCPサーバーの拡張版と
 - マークダウンファイルに直接CSSやHTMLが書かれる
 - 人力編集難易度が上がる
 - 複雑なレイアウトの出力は賢いモデルじゃないと上手くできないかも？
+
+# 作成例(2026-02-09追記)
+
+｢適当にWeb検索してスライド作って｣と頼んででてきたスライドがこちら。
+
+<iframe 
+    src="https://docs.google.com/viewer?url=https%3A%2F%2Ffiledn.com%2FlF97wFVWosQpHEoDAbvva0h%2Fslides%2F%25E2%2596%25B6%25EF%25B8%258F2026-02-06_marp-mcp%25E3%2583%2586%25E3%2582%2599%25E3%2583%25A2.pdf&embedded=true" 
+    width="100%" 
+    height="400px" 
+    style="border: none;">
+</iframe>
+
+埋め込み画像もSVGで書かせれば勝手に書いてくれる。強い。
 
 # おわりに
 
