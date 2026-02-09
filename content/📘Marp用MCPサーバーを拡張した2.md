@@ -80,6 +80,7 @@ description: Marpスライド作成支援ツールMCPサーバーの拡張版と
     style="border: none;">
 </iframe>
 
+重くて開かない場合は[こちら](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/slides/%E2%96%B6%EF%B8%8F2026-02-06_marp-mcp%E3%83%86%E3%82%99%E3%83%A2.pdf)
 埋め込み画像もSVGで書かせれば勝手に書いてくれる。強い。
 
 # おわりに
