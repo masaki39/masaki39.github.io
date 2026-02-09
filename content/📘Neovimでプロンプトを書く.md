@@ -27,7 +27,7 @@ Neovimにはどうやら起動時のargsに多彩なオプションが用意さ�
 相談の結果、下記のaliasを`.zshrc`に登録することになった。
 
 ```zsh
-alias p='nvim /tmp/prompt_$$.md -c startinsert -c "autocmd VimLeave * silent! %y +"'
+alias p='nvim "/tmp/prompt_$(date +%Y%m%d%H%M%S).md" -c startinsert -c "autocmd VimLeave * silent! %y +"'
 ```
 
 ターミナルでpを押すとマークダウンファイルが作成されて、入力が終わるとクリップボードにコピーされる。
