@@ -35,3 +35,44 @@ article.popover-hint h2 {
   border-left: 8px solid var(--header-banner-border);
   border-radius: 6px;
 }
+
+/* =====================
+   Recent Notes hover
+   ===================== */
+li.recent-li {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 6px;
+}
+
+li.recent-li:hover {
+  transform: translateX(5px);
+}
+
+/* =====================
+   Link hover lift effect
+   ===================== */
+a.internal {
+  transition: color 0.2s ease;
+}
+
+/* Article list cards (explorer / backlinks) */
+.backlinks ul li,
+ul.tags li {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.backlinks ul li:hover,
+ul.tags li:hover {
+  transform: translateX(4px);
+}
+
+/* =====================
+   Tag pill hover
+   ===================== */
+a.tag-link {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+a.tag-link:hover {
+  transform: translateY(-2px);
+}
