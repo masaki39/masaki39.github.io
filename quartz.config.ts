@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: false,
     analytics: { provider: 'google', tagId: 'G-FWFC15R9LQ' },
-    locale: "ja-JP",
+    locale: "en-US",
     baseUrl: "masaki39.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",

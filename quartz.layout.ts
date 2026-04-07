@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
     Component.Comments({
       provider: 'giscus',
       options: {
@@ -54,8 +55,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
-    Component.PopularPosts({ limit: 5 }),
+    Component.DesktopOnly(Component.PopularPosts({ limit: 10 }),),
   ],
   right: [
     Component.Graph(),
@@ -79,7 +79,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
+    Component.DesktopOnly(Component.PopularPosts({ limit: 10 }),),
   ],
   right: [],
 }
