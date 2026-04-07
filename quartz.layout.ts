@@ -55,6 +55,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
+    Component.PopularPosts({ limit: 5 }),
   ],
   right: [
     Component.Graph(),
