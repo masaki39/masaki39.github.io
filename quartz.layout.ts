@@ -6,7 +6,6 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    Component.RecentNotes({ title: "Recent writing" , showTags: false, limit: 5, linkToMore: "tags/note"}),
     Component.Comments({
       provider: 'giscus',
       options: {
@@ -19,14 +18,14 @@ export const sharedPageComponents: SharedLayout = {
         // from data-category-id
         categoryId: 'DIC_kwDON-ip9s4CnRWX',
       }
-   }),
+    }),
     Component.AfterBodyWebring(),
   ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/masaki39",
       Bluesky: "https://bsky.app/profile/masa21gifus.bsky.social",
-      RSS : "https://masaki39.github.io/index.xml",
+      RSS: "https://masaki39.github.io/index.xml",
     },
   }),
 }
@@ -55,7 +54,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
   ],
   right: [
     Component.Graph(),
@@ -79,7 +78,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
   ],
   right: [],
 }

@@ -1,15 +1,15 @@
 @use "./base.scss";
 
 :root {
-  --header-banner-bg: #e5eef9;
-  --header-banner-text: #0f2e4a;
-  --header-banner-border: #2f7ecb;
+  --header-banner-bg: #d0d5e3;
+  --header-banner-text: #343b58;
+  --header-banner-border: #2e7de9;
 }
 
 :root[saved-theme="dark"] {
-  --header-banner-bg: #1f2a36;
-  --header-banner-text: #e7f0ff;
-  --header-banner-border: #6bb3ff;
+  --header-banner-bg: #24283b;
+  --header-banner-text: #c0caf5;
+  --header-banner-border: #7aa2f7;
 }
 
 /* Simple banner style for in-article headings h1. */
