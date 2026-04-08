@@ -85,6 +85,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1347049921951755" crossOrigin="anonymous"></script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
