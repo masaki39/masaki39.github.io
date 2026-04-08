@@ -25,8 +25,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/masaki39",
-      Bluesky: "https://bsky.app/profile/masa21gifus.bsky.social",
-      RSS: "https://masaki39.github.io/index.xml",
+      Bluesky: "https://bsky.app/profile/masaki39.net",
+      RSS: "https://masaki39.net/index.xml",
     },
   }),
 }
