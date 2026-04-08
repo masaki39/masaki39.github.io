@@ -49,7 +49,7 @@ DNS 設定が完了したら、GitHub 上でドメインを登録する。
 3. **Custom domain** の入力欄にドメイン名を入力（例：`example.net`）
 4. **Save** をクリック
 
-**Enforce HTTPS**というチェックボックスが押せたら押す。HTTPS（暗号化通信）を強制することで、訪問者は常に安全な通信でサイトにアクセスできるらしい。
+**Enforce HTTPS**というチェックボックスが押せたら押す。有効にするにはDNS設定でCloudflareのプロキシを外さないといけない。HTTPS（暗号化通信）を強制することで、訪問者は常に安全な通信でサイトにアクセスできるらしい。
 
 ![GitHubでの設定画面](https://i.gyazo.com/fe396feb40587c340f36b4d23db29363.webp)
 
