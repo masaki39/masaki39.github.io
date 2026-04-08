@@ -1,12 +1,9 @@
 ---
 date: 2023-12-12
-updated: 2025-07-26
+updated: 2026-04-08
 aliases:
-  - サイト
 tags:
-  - obsidian
-  - quartz
-title: Home
+title: masaki39.net
 enableToc: false
 socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/og-image.png
 ---
