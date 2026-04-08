@@ -53,7 +53,7 @@ export default ((userOpts?: Partial<Options>) => {
 
     return (
       <div class={classNames(displayClass, "popular-posts", "recent-notes")}>
-        <h3>{opts.title}</h3>
+        <h3>{opts.title}<span style="font-size: 0.7em; font-weight: normal; margin-left: 0.5em; opacity: 0.6;">last 30 days</span></h3>
         <ul class="recent-ul">
           {posts.map(({ file, views }) => (
             <li class="recent-li">
