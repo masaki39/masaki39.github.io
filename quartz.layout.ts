@@ -55,7 +55,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.DesktopOnly(Component.PopularPosts({ limit: 10 }),),
+    Component.DesktopOnly(Component.PopularPosts({ limit: 5 }),),
   ],
   right: [
     Component.Graph(),
@@ -79,7 +79,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.DesktopOnly(Component.PopularPosts({ limit: 10 }),),
+    Component.DesktopOnly(Component.PopularPosts({ limit: 5 }),),
   ],
   right: [],
 }
