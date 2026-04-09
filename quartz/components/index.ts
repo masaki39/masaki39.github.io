@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import AfterBodyWebring from "./AfterBodyWebring"
 import PopularPosts from "./PopularPosts"
+import KofiSupport from "./KofiSupport"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   AfterBodyWebring,
   PopularPosts,
+  KofiSupport,
 }

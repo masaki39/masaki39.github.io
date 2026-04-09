@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.KofiSupport(),
     Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note" }),
     Component.Comments({
       provider: 'giscus',
