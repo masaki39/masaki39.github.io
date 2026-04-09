@@ -4,7 +4,6 @@ updated: 2025-03-11
 aliases: []
 tags:
   - note/publish
-  - templater
 socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202025-02-10%2023.16.18%20-%20A%20wide%20Open%20Graph%20Protocol%20(OGP)%20image%20with%20the%20title%20'%F0%9F%93%98Templater%E3%81%A6%E3%82%99QuickAdd%E3%81%99%E3%82%8B'.%20The%20design%20is%20clean%20and%20modern%2C%20featuring%20a%20blue-themed%20background%20wit.webp
 ---
 

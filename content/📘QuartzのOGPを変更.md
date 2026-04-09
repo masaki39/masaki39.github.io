@@ -4,7 +4,6 @@ updated: 2024-05-11
 aliases: []
 tags:
   - note/publish
-  - quartz
 ---
 
 %%

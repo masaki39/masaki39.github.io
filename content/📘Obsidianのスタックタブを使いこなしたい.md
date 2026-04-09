@@ -4,7 +4,6 @@ updated: 2025-02-22
 aliases: []
 tags:
   - note/publish
-  - obsidian
 socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202025-02-22%2022.53.12%20-%20A%20modern%2C%20stylish%20OGP%20image%20for%20an%20article%20titled%20'Obsidian%E3%81%AE%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF%E3%82%BF%E3%83%95%E3%82%99%E3%82%92%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%97%E3%81%9F%E3%81%84'.%20The%20design%20should%20be%20clean%20and%20professional%2C%20with%20a%20tech-focused%20aestheti.webp
 ---
 

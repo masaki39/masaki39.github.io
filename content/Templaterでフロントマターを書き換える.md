@@ -4,9 +4,9 @@ updated: 2024-02-13
 aliases:
   - 📘Templaterでフロントマターを書き換える
 tags:
-  - obsidian
-  - obsidian/plugin
-  - templater
+  - 1
+  - 1
+  - 1
   - note/publish
 cssclasses:
 ---

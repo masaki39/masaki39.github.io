@@ -4,10 +4,10 @@ updated: 2024-02-09
 aliases:
   - 📘Citationsのテンプレを更新する
 tags:
-  - obsidian
-  - obsidian/plugin
-  - citations
-  - python
+  - 1
+  - 1
+  - 1
+  - 1
   - note/publish
 title: 📘Citationsのテンプレを更新する
 description:

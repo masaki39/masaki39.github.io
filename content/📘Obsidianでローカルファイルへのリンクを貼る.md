@@ -21,7 +21,7 @@ Obsidian でローカルファイルへのパスを貼る方法です。
 [ファイル・フォルダ名](<file:///フルパス>)
 ```
 
-[作業ログ｜Obsidianで便利なローカルファイルへのリンクを、Automatorに作成してもらうと楽ちんだなあ #MacOSX - Qiita](https://qiita.com/hann-solo/items/5537e54704db48696f80)
+[作業ログ｜Obsidianで便利なローカルファイルへのリンクを、Automatorに作成してもらうと楽ちんだなあ MacOSX - Qiita](https://qiita.com/hann-solo/items/5537e54704db48696f80)
 
 今まで私は上記ページを参考に Templater でローカルファイルパスを作っていました。今日、プラグインもあるなぁと README をみてみたら、｢ドラッグ&ドロップでできるようになったのでこのプラグインはもう必要ない｣と書いてあるのを発見しました...
 

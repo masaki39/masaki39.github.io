@@ -84,7 +84,7 @@ H~2~O is a liquid.  2^10^ is 1024.
 
 と書いてあるので、subscript は~で、superscript は^で囲えば良いようだ。ググると Lua Filter で解決する記事を発見した。
 
-[Markdown中の下付き文字をPandocでWord/LaTeX出力する際にLuaフィルターで処理してみる #Markdown - Qiita](https://qiita.com/yi_chemist/items/c4f5f8cc32e5b802a091#fn-pandoc-options)
+[Markdown中の下付き文字をPandocでWord/LaTeX出力する際にLuaフィルターで処理してみる Markdown - Qiita](https://qiita.com/yi_chemist/items/c4f5f8cc32e5b802a091#fn-pandoc-options)
 
 Lua Filter は.lua で終わるコードが書かれたテキストファイルを作成して、Pandoc の実行コマンドに
 

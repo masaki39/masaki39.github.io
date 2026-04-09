@@ -4,10 +4,10 @@ updated: 2024-05-28
 aliases:
   - 📘Dataviewの使い方
 tags:
-  - dataview
+  - 1
   - note/publish
-  - obsidian
-  - obsidian/plugin
+  - 1
+  - 1
 cssclasses: 
 title: 📘Dataviewの使い方
 ---

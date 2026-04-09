@@ -21,7 +21,6 @@ export const sharedPageComponents: SharedLayout = {
         categoryId: 'DIC_kwDON-ip9s4CnRWX',
       }
     }),
-    Component.AfterBodyWebring(),
   ],
   footer: Component.Footer({
     links: {
@@ -42,6 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.TerminalHero(),
   ],
   left: [
     Component.PageTitle(),

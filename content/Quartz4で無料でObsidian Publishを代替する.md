@@ -5,8 +5,8 @@ aliases:
   - 📘Quartz4で無料でObsidian Publishを代替する
 tags:
   - note/publish
-  - obsidian
-  - quartz
+  - 1
+  - 1
 cssclasses: 
 title: 
 description: 

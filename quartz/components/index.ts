@@ -26,6 +26,7 @@ import ConditionalRender from "./ConditionalRender"
 import AfterBodyWebring from "./AfterBodyWebring"
 import PopularPosts from "./PopularPosts"
 import KofiSupport from "./KofiSupport"
+import TerminalHero from "./TerminalHero"
 
 export {
   ArticleTitle,
@@ -56,4 +57,5 @@ export {
   AfterBodyWebring,
   PopularPosts,
   KofiSupport,
+  TerminalHero,
 }

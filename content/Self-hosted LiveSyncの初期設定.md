@@ -4,8 +4,8 @@ updated: 2024-02-14
 aliases:
   - 📘Self-hosted LiveSyncの初期設定
 tags:
-  - obsidian
-  - obsidian/plugin
+  - 1
+  - 1
   - note/publish
 cssclasses: 
 title: 📘Self-hosted LiveSyncの初期設定

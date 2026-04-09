@@ -4,7 +4,6 @@ updated: 2025-03-05
 aliases: []
 tags:
   - note/publish
-  - obsidian
 ---
 
 Obsidian Gitを導入した。Obsidian Gitは同期の手段の1つとして紹介されがちだが、導入した理由は同期ではなくバージョン管理を行いたいから。
