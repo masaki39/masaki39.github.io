@@ -40,7 +40,6 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
     Component.TerminalHero(),
   ],
   left: [
@@ -59,7 +58,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.PopularPosts({ limit: 5 }),),
   ],
   right: [
-    Component.Graph(),
+    Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
