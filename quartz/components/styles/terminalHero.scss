@@ -56,6 +56,18 @@
     &.empty {
       height: 0.5em;
     }
+
+    &.ascii {
+      font-size: var(--ascii-font-size, 0.6em);
+      line-height: 1.15;
+      white-space: pre;
+      color: #8B6040;
+
+      .a-yellow { color: #D4A574; }
+      .a-green  { color: #5C3317; }
+      .a-cyan   { color: #8B6040; }
+      .a-dim    { color: #A08060; }
+    }
   }
 
   .terminal-cursor {
