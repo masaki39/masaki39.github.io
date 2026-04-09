@@ -4,10 +4,6 @@ updated: 2024-02-09
 aliases:
   - 📘Citationsのテンプレを更新する
 tags:
-  - 1
-  - 1
-  - 1
-  - 1
   - note/publish
 title: 📘Citationsのテンプレを更新する
 description:

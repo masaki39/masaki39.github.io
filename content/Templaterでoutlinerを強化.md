@@ -5,8 +5,6 @@ aliases:
   - 📘Templaterでoutlinerを強化
 tags:
   - note/publish
-  - 1
-  - 1
 title: 📘Templaterでoutlinerを強化
 ---
 

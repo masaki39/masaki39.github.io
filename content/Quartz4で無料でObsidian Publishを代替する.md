@@ -5,11 +5,9 @@ aliases:
   - 📘Quartz4で無料でObsidian Publishを代替する
 tags:
   - note/publish
-  - 1
-  - 1
-cssclasses: 
-title: 
-description: 
+cssclasses:
+title:
+description:
 ---
 
 # はじめに

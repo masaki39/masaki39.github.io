@@ -4,11 +4,8 @@ updated: 2024-05-28
 aliases:
   - 📘Dataviewの使い方
 tags:
-  - 1
   - note/publish
-  - 1
-  - 1
-cssclasses: 
+cssclasses:
 title: 📘Dataviewの使い方
 ---
 

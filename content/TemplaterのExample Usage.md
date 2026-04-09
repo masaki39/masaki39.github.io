@@ -4,9 +4,6 @@ updated: 2024-05-19
 aliases:
   - 📘TemplaterのExample Usage
 tags:
-  - 1
-  - 1
-  - 1
   - note/publish
 title: 📘TemplaterのExample Usage
 ---

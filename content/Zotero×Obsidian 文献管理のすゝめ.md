@@ -4,11 +4,7 @@ updated: 2025-03-26
 aliases:
   - 📘Zotero×Obsidian 文献管理のすゝめ
 tags:
-  - 1
-  - 1
   - note/publish
-  - 1
-  - 1
 cssclasses:
 title: 📘Zotero×Obsidian 文献管理のすゝめ
 socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/DALL%C2%B7E%202024-05-11%2020.44.50%20-%20A%20visually%20appealing%20OGP%20image%20for%20a%20blog%20post%20titled%20'Zotero%20%C3%97%20Obsidian%20for%20Literature%20Management'.%20The%20image%20should%20depict%20a%20digital%20workspace%20featu.jpg
