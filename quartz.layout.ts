@@ -27,6 +27,7 @@ export const sharedPageComponents: SharedLayout = {
       "🐙 GitHub": "https://github.com/masaki39",
       "🦋 Bluesky": "https://bsky.app/profile/masaki39.net",
       "📡 RSS": "https://masaki39.net/index.xml",
+      "💛 Support": "https://masaki39.net/support",
     },
   }),
 }
