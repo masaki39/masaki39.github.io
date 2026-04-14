@@ -7,7 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.KofiSupport(),
-    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note", filter: (f) => f.frontmatter?.tags?.includes("note") ?? false }),
+    Component.RecentNotes({ title: "Recent writing", showTags: false, limit: 5, linkToMore: "tags/note", filter: (f) => f.frontmatter?.tags?.includes("note/publish") ?? false }),
     Component.Comments({
       provider: 'giscus',
       options: {
