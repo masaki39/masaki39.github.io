@@ -130,6 +130,15 @@ edit = [
 
 [Yazi用のプラグイン](https://github.com/yazi-rs/plugins?tab=readme-ov-file)が色々あるようだ。今後必要であれば追加していこう。
 
+> [!note] 2026-04-15追記
+> 
+> 自作プラグインも割と作りやすい。
+> 
+> [[📘ghq用のyaziプラグインを作った]]
+> [[📘git履歴からファイルを復元するYaziプラグインを作った]]
+> 
+> [→その他](https://github.com/masaki39?tab=repositories&q=yazi&type=&language=&sort=)
+
 # おわりに
 
 Yaziは高いカスタマイズ性を持ちながらもそのままの設定でも便利に使用できる。Zoxideによる高速移動、強力な検索機能、そして豊富なプレビュー機能により、日々のファイル操作が劇的に改善される。これを機にFinderからは卒業し、キーボード中心の快適なファイル管理を行っていこう。
