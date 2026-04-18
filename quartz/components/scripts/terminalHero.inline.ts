@@ -64,7 +64,7 @@ const LINES: Line[] = [
   { type: "empty", text: "" },
   { type: "command", text: "cat about.txt" },
   { type: "output", text: "砂の書庫" },
-  { type: "output", text: "masaki39の個人サイト。砂場遊びが大好きな息子(当時2歳)に由来する名前。Obsidianで書いたノートの一部を公開しています。内容の正確性は保証しません。" },
+  { type: "output", text: "masaki39の個人サイト。砂場遊びが大好きな息子(当時2歳)に由来する名前。Obsidianで書いたノートの一部を公開しています。" },
   { type: "empty", text: "" },
   { type: "command", text: "cat avater.txt" },
   ...ASCII_ART.split("\n").map((line) => ({ type: "ascii" as LineType, text: line })),
