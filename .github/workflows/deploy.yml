@@ -5,7 +5,7 @@ on:
     branches:
       - v4
   schedule:
-    - cron: '0 21 * * 0'  # 毎週月曜6時JST
+    - cron: '0 21 * * *'  # 毎週月曜6時JST
  
 permissions:
   contents: read
