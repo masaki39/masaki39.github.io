@@ -1,6 +1,6 @@
 ---
 date: 2026-04-27
-updated: 2026-04-27
+updated: 2026-04-28
 aliases:
 tags:
   - note/publish
@@ -51,9 +51,8 @@ Caps Lockを長押しでHyperkeyにする場合、ちょっと遠い。単押し
 
 - Ctrl + L-Shiftをmodifierにして0~9を入力する。
 - R-ShiftをmodifierにしてShift+0~9を入力する。
-- fnをmodifierにしてfn+Fキーを入力する(-^¥が10~12)。
 
-![Keyboard keybindings](https://keymap-fetcher.vercel.app/api/keymap?keys=ctrl%2Cshift-l%2Cfn%2Cshift-r)
+![Keyboard keybindings](https://keymap-fetcher.vercel.app/api/keymap?keys=ctrl%2Cshift-l%2Cshift-r)
 
 これを追加することで、10キー配置ではないキーボードでも電卓のように使えるようになり、地味によく使う「"」や「!」などの特殊文字も打ちやすくなった。
 
@@ -63,12 +62,6 @@ hjklに慣れると矢印キーがすごく遠く感じる。個別設定して�
 
 ![Keyboard keybindings](https://keymap-fetcher.vercel.app/api/keymap?keys=ctrl%2Ch%2Cj%2Ck%2Cl)
 
-# Fn→F10
-
-Fnは単押しすることのないキーなので、比較的よく使うF10を配置する。
-
-![Keyboard keybindings](https://keymap-fetcher.vercel.app/api/keymap?keys=fn)
-
 # おわりに
 
-ざっくりだが、とりあえずこれだけ設定してみた。Fキーと数字キー、矢印キーを押す必要がなくなりだいぶ快適度が増した。ザクがシャア専用ザクになってきたような感じだ。こういう｢絶対便利だけど設定が面倒くさそう｣な所にLLMを使うのが最近のマイブームである。
+ざっくりだが、とりあえずこれだけ設定してみた。数字キーと矢印キーを押す必要がなくなりだいぶ快適度が増した。ザクがシャア専用ザクになってきたような感じだ。こういう｢絶対便利だけど設定が面倒くさそう｣な所にLLMを使うのが最近のマイブームである。
