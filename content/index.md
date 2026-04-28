@@ -7,4 +7,3 @@ title: Home
 enableToc: false
 socialImage: https://filedn.com/lF97wFVWosQpHEoDAbvva0h/ogp/og-image.png
 ---
-誰かの役に立つかもしれないし、役に立たないかもしれない。
