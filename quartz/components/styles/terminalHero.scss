@@ -7,6 +7,12 @@
   font-family: "SFMono-Regular", "Consolas", "Liberation Mono", "Menlo", monospace;
   font-size: 0.875em;
   line-height: 1.7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+  }
 
   .terminal-titlebar {
     display: flex;
@@ -56,7 +62,6 @@
     &.empty {
       height: 0.5em;
     }
-
   }
 
   .terminal-cursor {
@@ -71,6 +76,22 @@
 
   .terminal-cursor.visible {
     opacity: 1;
+  }
+}
+
+/* Dark mode neon glow */
+:root[saved-theme="dark"] .terminal-hero {
+  border-color: rgba(122, 162, 247, 0.25);
+  box-shadow:
+    0 0 0 1px rgba(122, 162, 247, 0.15),
+    0 4px 30px rgba(122, 162, 247, 0.1),
+    0 0 60px rgba(187, 154, 247, 0.05);
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px rgba(122, 162, 247, 0.4),
+      0 8px 40px rgba(122, 162, 247, 0.18),
+      0 0 80px rgba(187, 154, 247, 0.1);
   }
 }
 

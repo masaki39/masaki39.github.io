@@ -12,7 +12,9 @@
   --header-banner-border: #7aa2f7;
 }
 
-/* Simple banner style for in-article headings h1. */
+/* =====================
+   Article h1/h2 banners
+   ===================== */
 article.popover-hint h1 {
   font-size: 1.6rem;
   display: block;
@@ -37,7 +39,145 @@ article.popover-hint h2 {
 }
 
 /* =====================
-   Recent Notes hover
+   Reading progress bar  [#3]
+   ===================== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.08s linear;
+  box-shadow: 0 0 8px rgba(122, 162, 247, 0.5);
+}
+
+/* =====================
+   Back to top button  [#17]
+   ===================== */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+  z-index: 200;
+  box-shadow: 0 4px 14px rgba(122, 162, 247, 0.35);
+  pointer-events: none;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  box-shadow: 0 6px 22px rgba(122, 162, 247, 0.55);
+  transform: translateY(-3px);
+}
+
+/* =====================
+   Dark mode View Transitions ripple  [#19]
+   ===================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.45s;
+}
+
+::view-transition-old(root) {
+  animation-name: none;
+}
+
+::view-transition-new(root) {
+  animation-name: vt-ripple;
+  clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%));
+}
+
+@keyframes vt-ripple {
+  to {
+    clip-path: circle(150% at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+}
+
+/* =====================
+   Tag / folder page — grid cards  [#20]
+   ===================== */
+.page-listing ul.section-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.page-listing li.section-li {
+  margin: 0;
+}
+
+.page-listing .section {
+  display: flex !important;
+  flex-direction: column !important;
+  background: var(--lightgray);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  height: 100%;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  & > .meta {
+    font-size: 0.78em;
+    opacity: 0.6;
+    margin: 0 0 0.25rem 0 !important;
+  }
+
+  & > .desc {
+    flex: 1;
+
+    h3 {
+      margin: 0;
+      font-size: 0.92rem;
+    }
+  }
+
+  & > .tags {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.page-listing li.section-li:hover .section {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  border-color: var(--secondary);
+}
+
+:root[saved-theme="dark"] .page-listing li.section-li:hover .section {
+  box-shadow: 0 8px 24px rgba(122, 162, 247, 0.2);
+}
+
+/* =====================
+   Original hover effects (restored)
    ===================== */
 li.recent-li {
   transition: transform 0.2s ease, opacity 0.2s ease;
@@ -48,27 +188,20 @@ li.recent-li:hover {
   transform: translateX(5px);
 }
 
-/* =====================
-   Link hover lift effect
-   ===================== */
 a.internal {
   transition: color 0.2s ease;
 }
 
-/* Article list cards (explorer / backlinks) */
-.backlinks ul li,
+.backlinks ul li:not(.overflow-end),
 ul.tags li {
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-.backlinks ul li:hover,
+.backlinks ul li:not(.overflow-end):hover,
 ul.tags li:hover {
   transform: translateX(4px);
 }
 
-/* =====================
-   Tag pill hover
-   ===================== */
 a.tag-link {
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }

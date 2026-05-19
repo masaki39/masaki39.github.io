@@ -23,11 +23,51 @@ const LINE_PAUSE_AFTER_OUTPUT = 40
 const INITIAL_DELAY = 400
 
 document.addEventListener("nav", () => {
+  // ── Back to top button  [#17] ─────────────────────────────────
+  document.getElementById("back-to-top")?.remove()
+  const backToTop = document.createElement("button")
+  backToTop.id = "back-to-top"
+  backToTop.setAttribute("aria-label", "Back to top")
+  backToTop.innerHTML = "↑"
+  document.body.appendChild(backToTop)
+
+  const toggleBtn = () => backToTop.classList.toggle("visible", window.scrollY > 300)
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
+
+  window.addEventListener("scroll", toggleBtn, { passive: true })
+  backToTop.addEventListener("click", scrollToTop)
+  toggleBtn()
+
+  window.addCleanup(() => {
+    window.removeEventListener("scroll", toggleBtn)
+    backToTop.removeEventListener("click", scrollToTop)
+    backToTop.remove()
+  })
+
+  // ── Reading progress bar  [#3] ────────────────────────────────
+  document.getElementById("reading-progress")?.remove()
+  const progressBar = document.createElement("div")
+  progressBar.id = "reading-progress"
+  document.body.prepend(progressBar)
+
+  const updateProgress = () => {
+    const scrollTop = window.scrollY
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight
+    progressBar.style.width = docHeight > 0 ? `${(scrollTop / docHeight) * 100}%` : "0%"
+  }
+  window.addEventListener("scroll", updateProgress, { passive: true })
+  updateProgress()
+
+  window.addCleanup(() => {
+    window.removeEventListener("scroll", updateProgress)
+    progressBar.remove()
+  })
+
+  // ── Terminal typing animation (index page only) ───────────────
   const body = document.querySelector<HTMLElement>(".terminal-body")
   const cursor = document.querySelector<HTMLElement>(".terminal-cursor")
   if (!body || !cursor) return
 
-  // Reset state for SPA navigation
   body.querySelectorAll(".terminal-line").forEach((el) => el.remove())
   cursor.classList.remove("visible")
 
