@@ -1,0 +1,49 @@
+{
+  "name": "@masaki39/popular-posts",
+  "version": "1.0.0",
+  "description": "Popular posts list for Quartz (driven by quartz-plugins/popular-posts/src/data/popular-posts.json)",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "popular-posts",
+    "displayName": "PopularPosts",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "title": "Popular",
+      "limit": 5
+    },
+    "optionSchema": {
+      "title": {
+        "type": "string"
+      },
+      "limit": {
+        "type": "number"
+      }
+    },
+    "components": {
+      "PopularPosts": {
+        "displayName": "Popular Posts",
+        "defaultPosition": "left",
+        "defaultPriority": 50
+      }
+    }
+  }
+}

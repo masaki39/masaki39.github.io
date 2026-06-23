@@ -1,0 +1,59 @@
+filters:
+  and:
+    - file.name != "index"
+    - file.name != "404"
+    - file.name != "support"
+    - file.tags.contains("note/publish")
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: タイトル
+views:
+  - type: table
+    name: "2026"
+    filters:
+      and:
+        - date >= "2026-01-01"
+    order:
+      - date
+      - file.name
+    sort:
+      - property: date
+        direction: DESC
+    columnSize:
+      note.date: 196
+  - type: table
+    name: "2025"
+    filters:
+      and:
+        - date >= "2025-01-01"
+        - date <= "2025-12-31"
+    order:
+      - date
+      - file.name
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: "2024"
+    filters:
+      and:
+        - date >= "2024-01-01"
+        - date <= "2024-12-31"
+    order:
+      - date
+      - file.name
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: "2023"
+    filters:
+      and:
+        - date <= "2023-12-31"
+    order:
+      - date
+      - file.name
+    sort:
+      - property: date
+        direction: DESC

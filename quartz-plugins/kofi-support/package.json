@@ -1,0 +1,39 @@
+{
+  "name": "@masaki39/kofi-support",
+  "version": "1.0.0",
+  "description": "Ko-fi support button for Quartz",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "kofi-support",
+    "displayName": "KofiSupport",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "optionSchema": {},
+    "components": {
+      "KofiSupport": {
+        "displayName": "Ko-fi Support",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 5
+      }
+    }
+  }
+}

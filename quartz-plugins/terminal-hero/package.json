@@ -1,0 +1,39 @@
+{
+  "name": "@masaki39/terminal-hero",
+  "version": "1.0.0",
+  "description": "Animated terminal hero for the Quartz index page (also mounts reading-progress bar and back-to-top button)",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "sideEffects": false,
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "terminal-hero",
+    "displayName": "TerminalHero",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "optionSchema": {},
+    "components": {
+      "TerminalHero": {
+        "displayName": "Terminal Hero",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 30
+      }
+    }
+  }
+}
