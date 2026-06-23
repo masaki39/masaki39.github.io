@@ -21,6 +21,32 @@ h2.page-title {
 }
 
 /* =====================
+   Fix: external-link colour filter tints OGP card images blue in dark mode.
+   quartz-themes applies `filter: var(--link-external-filter)` to a.external-link,
+   which cascades to the child <img>. Drop it for links that wrap an image
+   (filter on the parent can't be undone on the child, so target the anchor).
+   ===================== */
+a.external:has(> img),
+a.external-link:has(> img) {
+  filter: none;
+}
+
+/* =====================
+   Fix: dark-mode code blocks lose their background (it blends into the page),
+   so the padding looks like a floating left margin. Restore a visible container
+   background to match light mode.
+   ===================== */
+:root[saved-theme="dark"] {
+  figure[data-rehype-pretty-code-figure],
+  figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title],
+  pre:has(> code),
+  pre > code,
+  pre > code > [data-line] {
+    background-color: var(--lightgray);
+  }
+}
+
+/* =====================
    Article h1/h2 banners
    ===================== */
 article.popover-hint h1 {
