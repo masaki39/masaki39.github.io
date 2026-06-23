@@ -56,7 +56,7 @@ plugins:
     options:
       theme:
         light: github-light
-        dark: tokyo-night
+        dark: github-dark
       keepBackground: false
     order: 20
   - source: github:quartz-community/obsidian-flavored-markdown
@@ -296,7 +296,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: tokyo-night
   - source: github:quartz-community/obsidian-plugin-excalidraw

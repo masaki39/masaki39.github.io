@@ -31,35 +31,6 @@ a.external-link:has(> img) {
   filter: none;
 }
 
-/* =====================
-   Fix: dark-mode code blocks lose their background (it blends into the page),
-   so the padding looks like a floating left margin. Restore a visible container
-   background to match light mode.
-   ===================== */
-:root[saved-theme="dark"] {
-  figure[data-rehype-pretty-code-figure],
-  figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title],
-  pre:has(> code),
-  pre > code,
-  pre > code > [data-line] {
-    background-color: var(--lightgray);
-  }
-}
-
-/* =====================
-   Tighten the code-block left padding so the line numbers sit close to the
-   edge instead of behind a wide gap (quartz-themes sets padding-inline-start
-   to 16px). Applied in both modes for consistency.
-   ===================== */
-pre:has(> code),
-pre > code {
-  padding-inline-start: 0.6rem;
-}
-
-pre > code > [data-line]::before {
-  width: 1.2rem;
-  margin-right: 0.7rem;
-}
 
 /* =====================
    Article h1/h2 banners
@@ -143,30 +114,6 @@ article.popover-hint h2 {
 #back-to-top:hover {
   box-shadow: 0 6px 22px rgba(122, 162, 247, 0.55);
   transform: translateY(-3px);
-}
-
-/* =====================
-   Dark mode View Transitions ripple  [#19]
-   (JS lives in the darkmode plugin fork — Phase 2/3)
-   ===================== */
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.45s;
-}
-
-::view-transition-old(root) {
-  animation-name: none;
-}
-
-::view-transition-new(root) {
-  animation-name: vt-ripple;
-  clip-path: circle(0% at var(--vt-x, 50%) var(--vt-y, 50%));
-}
-
-@keyframes vt-ripple {
-  to {
-    clip-path: circle(150% at var(--vt-x, 50%) var(--vt-y, 50%));
-  }
 }
 
 /* =====================
