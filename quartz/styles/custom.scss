@@ -47,6 +47,21 @@ a.external-link:has(> img) {
 }
 
 /* =====================
+   Tighten the code-block left padding so the line numbers sit close to the
+   edge instead of behind a wide gap (quartz-themes sets padding-inline-start
+   to 16px). Applied in both modes for consistency.
+   ===================== */
+pre:has(> code),
+pre > code {
+  padding-inline-start: 0.6rem;
+}
+
+pre > code > [data-line]::before {
+  width: 1.2rem;
+  margin-right: 0.7rem;
+}
+
+/* =====================
    Article h1/h2 banners
    ===================== */
 article.popover-hint h1 {
