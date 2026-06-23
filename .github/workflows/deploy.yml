@@ -42,6 +42,15 @@ jobs:
         run: npm ci
       - name: Install Quartz plugins
         run: npx quartz plugin install
+      - name: Normalize content filenames to NFC
+        run: node scripts/normalize-content-nfc.mjs
+      - name: Fetch Popular Posts from GA4
+        env:
+          GA_CREDENTIALS: ${{ secrets.GA_CREDENTIALS }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
+        run: |
+          npm install --no-save @google-analytics/data
+          node scripts/fetch-popular.mjs
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact

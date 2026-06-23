@@ -40,16 +40,23 @@ function classNames(displayClass, ...classes) {
 // quartz-plugins/popular-posts/src/components/styles/recentNotes.scss
 var recentNotes_default = ".recent-notes > h3 {\n  margin: 0.5rem 0 0 0;\n  font-size: 1rem;\n}\n.recent-notes > ul.recent-ul {\n  list-style: none;\n  margin-top: 1rem;\n  padding-left: 0;\n}\n.recent-notes > ul.recent-ul > li {\n  margin: 1rem 0;\n}\n.recent-notes > ul.recent-ul > li .section > .desc > h3 > a {\n  background-color: transparent;\n}\n.recent-notes > ul.recent-ul > li .section > .meta {\n  margin: 0 0 0.5rem 0;\n  opacity: 0.6;\n}";
 
-// quartz-plugins/popular-posts/src/data/popular-posts.json
-var popular_posts_default = [
-  { path: "/Citations_2024-02-08", views: 1234 },
-  { path: "/Dataview%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9", views: 890 },
-  { path: "/Dataview%E3%82%92%E4%BD%BF%E3%81%84%E8%BE%BC%E3%82%80", views: 756 },
-  { path: "/Obsidian%E3%81%A7Bibliography%E4%BB%98%E3%81%8D%E6%96%87%E6%9B%B8%E3%82%92%E4%BD%9C%E6%88%90", views: 543 }
-];
-
 // quartz-plugins/popular-posts/src/components/PopularPosts.tsx
+import { readFileSync } from "fs";
+import { join } from "path";
 import { jsx, jsxs } from "preact/jsx-runtime";
+function loadPopularPosts() {
+  try {
+    const raw = readFileSync(
+      join(process.cwd(), "quartz-plugins/popular-posts/data/popular-posts.json"),
+      "utf-8"
+    );
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+var popularData = loadPopularPosts();
+var normSlug = (s) => simplifySlug(s).normalize("NFC").toLowerCase();
 var defaultOptions = {
   title: "Popular",
   limit: 5
@@ -61,10 +68,10 @@ var PopularPosts_default = ((userOpts) => {
     fileData,
     displayClass
   }) => {
-    const posts = popular_posts_default.map(({ path, views }) => {
+    const posts = popularData.map(({ path, views }) => {
       const fullSlug = decodeURIComponent(path.replace(/^\//, ""));
-      const slug = simplifySlug(fullSlug).toLowerCase();
-      const file = allFiles.find((f) => simplifySlug(f.slug).toLowerCase() === slug);
+      const slug = normSlug(fullSlug);
+      const file = allFiles.find((f) => normSlug(f.slug) === slug);
       return file ? { file, views } : null;
     }).filter((p) => p !== null).slice(0, opts.limit);
     if (posts.length === 0) return null;
