@@ -15,7 +15,7 @@ description: Yaziは、ターミナル上で動作する高速でカスタマイ
 
 [Yazi](https://github.com/sxyazi/yazi)とは、ターミナル上で動作するファイルマネージャーである。簡単に言うと、Macで言うところのFinder、Windowsでいうところのエクスプローラーである。ちなみに中国語でアヒルを意味するらしい。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20251015221648.webp)
+![](https://i.gyazo.com/46e6caf891235b3e0bad9f4d9eb94057.webp)
 ↑Yaziの画面例
 
 - プレビュー画像を表示できる
@@ -30,7 +30,7 @@ description: Yaziは、ターミナル上で動作する高速でカスタマイ
 
 `Z`で起動できる。最近訪れたディレクトリから検索して移動できる。95%くらいの率でこれで事足りる。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20251015230609.webp)
+![](https://i.gyazo.com/2f0fd71002a3cb5eb9793ca699e71f89.webp)
 
 # Yaziのセットアップ
 
@@ -65,7 +65,7 @@ Yaziは単独でも使用可能だが、プレビュー機能や検索機能は�
 
 さらに、[nerd-fonts](https://www.nerdfonts.com)というフォント＆アイコンパッチの使用が推奨されている。インストールしてターミナルに設定をするときれいなアイコンが表示される。しかし、Mac/Linuxユーザーであればターミナルの代わりに[Ghostty](https://ghostty.org/download)を使用すればデフォルトでnerd-fontsに対応しているので、特に設定は不要である。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20251015222729.webp)
+![](https://i.gyazo.com/d4f4e832c86362653e161bc3621ab6fc.webp)
 ↑デフォルトのターミナル(左)とGhostty(右)の比較
 ※[Starship](https://github.com/starship/starship)というシェルプロンプトを併用している
 

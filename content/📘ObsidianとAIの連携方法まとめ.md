@@ -26,11 +26,11 @@ description: ObsidianとLLM（大規模言語モデル）の連携方法とし�
 
 Obsidianにはコミュニティプラグインというシステムがある。コミュニティ主導の拡張機能である。｢私の考える最強のLLM連携｣を色んな人が開発しているので、好みのプラグインを選ぶと良い。ここでは、2026年1月現在で最もダウンロード数の多いCopilotを例に説明する。
 
-[![Copilot](https://ogpf.vercel.app/c?url=https://www.obsidiancopilot.com/en)](https://www.obsidiancopilot.com/en)
+[![Copilot](https://i.gyazo.com/25b8f860574de34c5fe141c7f4c3f029.webp)](https://www.obsidiancopilot.com/en)
 
 コミュニティプラグインでLLMを使用する場合、コミュニティプラグインが提供するのはLLMのモデル自体ではない。モデルは大手のプロバイダーと契約しなければならない。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20260130195610.webp)
+![](https://i.gyazo.com/6651ee42b332465b184d1372cc564b55.webp)
 
 どのコミュニティプラグインを使用するにしても設定にAPI keyの項目があるだろう。このAPI keyを介して、モデルを呼び出すことになる。呼び出したいモデルの契約をしてAPI keyを発行する必要がある。大手三社の現時点での契約ページを下記に示す。
 
@@ -40,7 +40,7 @@ Obsidianにはコミュニティプラグインというシステムがある。
 
 API keyを設定すると、コミュニティプラグイン独自の機能が使用できるようになる。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20260130200523.webp)
+![](https://i.gyazo.com/e1090a6d65ef547e7df63cdf7262a703.webp)
 
 ↑右側にchat画面が表示されている。
 
@@ -55,11 +55,11 @@ API keyを設定すると、コミュニティプラグイン独自の機能が�
 
 IDEというのは統合開発環境の略で、簡単に言うとコーディングの際に必要な機能を提供するテキストエディタである。コーディングはLLMとの統合が最も進んでいる分野であるので、AI機能を使用するときだけAI機能をもつIDEを開くというやり方がある。例としてVScodeで説明する。
 
-[![VS code](https://ogpf.vercel.app/c?url=https://code.visualstudio.com/)](https://code.visualstudio.com/)
+[![VS code](https://i.gyazo.com/a8aac1ac0677e16d7c0b3095f4bd978a.webp)](https://code.visualstudio.com/)
 
 ObsidianのVaultをVScodeで開くと下記のような画面になる。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20260130201529.webp)
+![](https://i.gyazo.com/c4c870134ac9e68b046aa90c1eee20d6.webp)
 
 大抵、左にファイルエクスプローラーがあり、中央にエディターがあり、右にチャット画面があることが多い。コーディングをするのと同様にLLMがファイル内容を書き換えたり、ファイルを検索することができる。
 
@@ -71,15 +71,15 @@ ObsidianのVaultをVScodeで開くと下記のような画面になる。
 
 CLIとはコマンドラインインターフェースの略であり、ターミナルで動作するツールのことである。例としてClaude Codeで説明する。
 
-[![Claude Code](https://ogpf.vercel.app/c?url=https://claude.com/ja-jp/product/claude-code)](https://claude.com/ja-jp/product/claude-code)
+[![Claude Code](https://i.gyazo.com/2877945229df9df8dcb1324dedc4ddb4.webp)](https://claude.com/ja-jp/product/claude-code)
 
 ターミナルでVaultのディレクトリに移動して、`claude`と打つとClaude Codeが起動する。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20260130202719.webp)
+![](https://i.gyazo.com/556163c8776f2c37d85311baa1ed3b22.webp)
 
 CLI型のLLMは、起動したディレクトリ配下へのアクセス権を持つので、後は自然言語で指示するのみである。CLI型は開いたファイルを自動で読み取ってくれるわけではないので、何らかの形でファイルを渡す必要がある。
 
-![](https://filedn.com/lF97wFVWosQpHEoDAbvva0h/image_20260130203428.webp)
+![](https://i.gyazo.com/ac76c1bacd8b29fe971e95deb1cb30af.webp)
 
 MCPサーバーなどが無設定であれば`@ファイル名`で手動で渡す事になる。
 
