@@ -50,16 +50,26 @@ export default ((userOpts?: Partial<Options>) => {
     fileData,
     displayClass,
   }: QuartzComponentProps) => {
+    const seen = new Set<string>()
     const posts = popularData
       .map(({ path, views }) => {
         const fullSlug = decodeURIComponent(path.replace(/^\//, "")) as FullSlug
         // v5 lowercases slugs; match case- and Unicode-normalization-insensitively
         // against the original-case GA paths.
         const slug = normSlug(fullSlug)
+        if (slug.endsWith(".base")) return null // Bases pages aren't articles
         const file = allFiles.find((f) => normSlug(f.slug!) === slug)
         return file ? { file, views } : null
       })
       .filter((p): p is NonNullable<typeof p> => p !== null)
+      .filter(({ file }) => {
+        // GA can report the same article under multiple raw paths; keep the
+        // first (highest-viewed) occurrence only.
+        const key = normSlug(file.slug!)
+        if (seen.has(key)) return false
+        seen.add(key)
+        return true
+      })
       .slice(0, opts.limit)
 
     if (posts.length === 0) return null

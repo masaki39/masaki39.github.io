@@ -21,24 +21,44 @@ const [response] = await client.runReport({
   dimensions: [{ name: "pagePath" }],
   metrics: [{ name: "screenPageViews" }],
   dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
-  limit: 20,
+  orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
+  limit: 50,
 })
 
-const posts = (response.rows ?? [])
+const rows = (response.rows ?? [])
   .map((row) => ({
     path: row.dimensionValues[0].value,
     views: parseInt(row.metricValues[0].value, 10),
   }))
   .filter((p) => {
-    const path = p.path
+    const path = decodeURIComponent(p.path)
     return (
       path !== "/" &&
       !path.startsWith("/tags") &&
       !path.endsWith(".xml") &&
       !path.endsWith(".json") &&
+      !path.endsWith(".base") &&
       !path.endsWith("/")
     )
   })
+
+// Same article can appear as multiple GA rows (case/Unicode-normalization/query
+// string variants of the same URL); merge them before ranking so the output list
+// has no duplicate articles.
+const normPath = (p) => decodeURIComponent(p).normalize("NFC").toLowerCase()
+const merged = new Map()
+for (const row of rows) {
+  const key = normPath(row.path)
+  const existing = merged.get(key)
+  if (existing) {
+    existing.views += row.views
+  } else {
+    merged.set(key, { ...row })
+  }
+}
+
+const posts = [...merged.values()]
+  .sort((a, b) => b.views - a.views)
   .slice(0, 10)
 
 mkdirSync(dirname(OUT), { recursive: true })

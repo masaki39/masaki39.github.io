@@ -38,7 +38,25 @@ function classNames(displayClass, ...classes) {
 }
 
 // quartz-plugins/popular-posts/src/components/styles/recentNotes.scss
-var recentNotes_default = ".recent-notes > h3 {\n  margin: 0.5rem 0 0 0;\n  font-size: 1rem;\n}\n.recent-notes > ul.recent-ul {\n  list-style: none;\n  margin-top: 1rem;\n  padding-left: 0;\n}\n.recent-notes > ul.recent-ul > li {\n  margin: 1rem 0;\n}\n.recent-notes > ul.recent-ul > li .section > .desc > h3 > a {\n  background-color: transparent;\n}\n.recent-notes > ul.recent-ul > li .section > .meta {\n  margin: 0 0 0.5rem 0;\n  opacity: 0.6;\n}";
+var recentNotes_default = `.recent-notes > h3 {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+}
+.recent-notes > ul.recent-ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+.recent-notes > ul.recent-ul > li {
+  margin: 1rem 0;
+}
+.recent-notes > ul.recent-ul > li .section > .desc > h3 > a {
+  background-color: transparent;
+}
+.recent-notes > ul.recent-ul > li .section > .meta {
+  margin: 0 0 0.5rem 0;
+  opacity: 0.6;
+}`;
 
 // quartz-plugins/popular-posts/src/components/PopularPosts.tsx
 import { readFileSync } from "fs";
@@ -68,12 +86,19 @@ var PopularPosts_default = ((userOpts) => {
     fileData,
     displayClass
   }) => {
+    const seen = /* @__PURE__ */ new Set();
     const posts = popularData.map(({ path, views }) => {
       const fullSlug = decodeURIComponent(path.replace(/^\//, ""));
       const slug = normSlug(fullSlug);
+      if (slug.endsWith(".base")) return null;
       const file = allFiles.find((f) => normSlug(f.slug) === slug);
       return file ? { file, views } : null;
-    }).filter((p) => p !== null).slice(0, opts.limit);
+    }).filter((p) => p !== null).filter(({ file }) => {
+      const key = normSlug(file.slug);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).slice(0, opts.limit);
     if (posts.length === 0) return null;
     return /* @__PURE__ */ jsxs("div", { class: classNames(displayClass, "popular-posts", "recent-notes"), children: [
       /* @__PURE__ */ jsxs("h3", { children: [
