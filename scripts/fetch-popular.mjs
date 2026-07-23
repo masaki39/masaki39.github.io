@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// Fetch the most-viewed pages (last 30 days) from Google Analytics 4 and write them to
-// the popular-posts plugin's data file. Run on CI before `quartz build`; the PopularPosts
-// component reads this file at render time.
+// Fetch the most-viewed pages for last calendar month from Google Analytics 4 and write
+// them to the popular-posts plugin's data file. Run on CI before `quartz build`; the
+// PopularPosts component reads this file at render time.
 //
 // Requires env: GA_CREDENTIALS (service-account JSON), GA_PROPERTY_ID.
 
@@ -14,13 +14,21 @@ const OUT = "quartz-plugins/popular-posts/data/popular-posts.json"
 const credentials = JSON.parse(process.env.GA_CREDENTIALS)
 const propertyId = process.env.GA_PROPERTY_ID
 
+// Compute the first and last day of the previous calendar month (in UTC) so the
+// ranking always reflects "last month", regardless of when this script runs.
+const now = new Date()
+const firstOfLastMonth = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - 1, 1))
+const lastOfLastMonth = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 0))
+const toISODate = (d) => d.toISOString().slice(0, 10)
+const month = toISODate(firstOfLastMonth).slice(0, 7) // "YYYY-MM"
+
 const client = new BetaAnalyticsDataClient({ credentials })
 
 const [response] = await client.runReport({
   property: `properties/${propertyId}`,
   dimensions: [{ name: "pagePath" }],
   metrics: [{ name: "screenPageViews" }],
-  dateRanges: [{ startDate: "30daysAgo", endDate: "today" }],
+  dateRanges: [{ startDate: toISODate(firstOfLastMonth), endDate: toISODate(lastOfLastMonth) }],
   orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
   limit: 50,
 })
@@ -62,5 +70,5 @@ const posts = [...merged.values()]
   .slice(0, 10)
 
 mkdirSync(dirname(OUT), { recursive: true })
-writeFileSync(OUT, JSON.stringify(posts, null, 2))
-console.log(`Written ${posts.length} popular posts to ${OUT}`)
+writeFileSync(OUT, JSON.stringify({ month, posts }, null, 2))
+console.log(`Written ${posts.length} popular posts for ${month} to ${OUT}`)

@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - v5
- 
+  schedule:
+    - cron: "0 1 2 * *" # 毎月2日 01:00 UTC = 10:00 JST — 先月分のランキングに更新
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write

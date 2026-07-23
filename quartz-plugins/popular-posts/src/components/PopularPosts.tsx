@@ -14,9 +14,14 @@ interface PopularPost {
   views: number
 }
 
+interface PopularPostsData {
+  month: string // "YYYY-MM" of the ranked month, e.g. "2026-06"
+  posts: PopularPost[]
+}
+
 // Read the data file at render time (not bundled) so the GA4 export written by
 // scripts/fetch-popular.mjs on CI is picked up without rebuilding the plugin.
-function loadPopularPosts(): PopularPost[] {
+function loadPopularPosts(): PopularPostsData {
   try {
     const raw = readFileSync(
       join(process.cwd(), "quartz-plugins/popular-posts/data/popular-posts.json"),
@@ -24,11 +29,22 @@ function loadPopularPosts(): PopularPost[] {
     )
     return JSON.parse(raw)
   } catch {
-    return []
+    return { month: "", posts: [] }
   }
 }
 
 const popularData = loadPopularPosts()
+
+// "2026-06" -> "Jun 2026"
+function formatMonthLabel(month: string): string {
+  const [year, monthNum] = month.split("-").map(Number)
+  if (!year || !monthNum) return ""
+  return new Date(Date.UTC(year, monthNum - 1, 1)).toLocaleString("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+}
 
 const normSlug = (s: string) => simplifySlug(s).normalize("NFC").toLowerCase()
 
@@ -51,7 +67,8 @@ export default ((userOpts?: Partial<Options>) => {
     displayClass,
   }: QuartzComponentProps) => {
     const seen = new Set<string>()
-    const posts = popularData
+    const monthLabel = formatMonthLabel(popularData.month)
+    const posts = popularData.posts
       .map(({ path, views }) => {
         const fullSlug = decodeURIComponent(path.replace(/^\//, "")) as FullSlug
         // v5 lowercases slugs; match case- and Unicode-normalization-insensitively
@@ -78,9 +95,11 @@ export default ((userOpts?: Partial<Options>) => {
       <div class={classNames(displayClass, "popular-posts", "recent-notes")}>
         <h3>
           {opts.title}
-          <span style="font-size: 0.7em; font-weight: normal; margin-left: 0.5em; opacity: 0.6;">
-            last 30 days
-          </span>
+          {monthLabel && (
+            <span style="font-size: 0.7em; font-weight: normal; margin-left: 0.5em; opacity: 0.6;">
+              {monthLabel}
+            </span>
+          )}
         </h3>
         <ul class="recent-ul">
           {posts.map(({ file, views }) => (
