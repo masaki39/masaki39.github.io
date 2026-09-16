@@ -4,6 +4,7 @@ updated: 2026-09-16
 aliases: []
 tags:
   - note/publish
+description: Obsidianを汎用Markdownエディターとして活用し、Vault外のMarkdownファイルをObsidianで開く新機能と、Obsidian CLI（command id=app:open-file）やopen -a Obsidianによる起動、Yaziのkeymap設定・Aliasによる快速連携、Live Previewの活用方法を解説。
 ---
 
 # はじめに
@@ -18,11 +19,7 @@ tags:
 
 ![](https://i.gyazo.com/7a0939d5f5ce8cdec137caa1f0aa08e9.webp)
 
-`Open file from outside the vault`というコマンド名となっている。
-
-![](https://i.gyazo.com/a661b7e49176261f38d0db878f9e2c55.webp)
-
-実行するとFinderが立ち上がり、開くファイルを選択することができる。
+`Open file from outside the vault`というコマンド名となっている。実行するとFinderが立ち上がり、開くファイルを選択することができる。
 
 ![](https://i.gyazo.com/db18406d86d35c6491df88d12a24c502.webp)
 
