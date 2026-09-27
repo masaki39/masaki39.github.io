@@ -11,19 +11,19 @@ description: 9月登場の低コスト・高速AI「Jev」を実機で試し、�
 
 9月15日にJevというのが出たらしい。Structured Outputしかできない代わりに非常に安価で速度が速いAIということだった。せっかくなので少し触ってみた。
 
-[![](https://ogpf.vercel.app/c?url=https://docs.typesafe.ai/introduction&layout=vertical)](https://docs.typesafe.ai/introduction)
+[![](https://i.gyazo.com/576010d2c3da900066db4e326695b045.webp)](https://docs.typesafe.ai/introduction)
 
 # 何が向いてそうか
 
 曖昧な定義なものを厳格な型つきのものに変換する。ということ「自然言語をCLIコマンドに即時変換する」というツールをとりあえず作ってみる。「natural-language-interface」と銘打ってみる。
 
-[![](https://ogpf.vercel.app/c?url=https://github.com/masaki39/natural-language-interface)](https://github.com/masaki39/natural-language-interface)
+[![](https://i.gyazo.com/ccd0f2115e1da8431b4589e9072f5a75.webp)](https://github.com/masaki39/natural-language-interface)
 
 仕組みは非常にシンプルで特に解説するほどのこともない。APIは汎用性を考えてOpen Routerのものを使うことにする。
 
 # 自然言語でコマンドを出力させる。
 
-例えば、
+例えば、 
 
 ```zsh
 nli gh リポジトリを開く
