@@ -31,6 +31,12 @@ a.external-link:has(> img) {
   filter: none;
 }
 
+/* Image links don't need the external-link icon; it wraps onto its own line
+   under the image and wastes vertical space. */
+a.external:has(> img) .external-icon {
+  display: none;
+}
+
 
 /* =====================
    Article h1/h2 banners
