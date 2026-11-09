@@ -4,6 +4,7 @@ updated: 2026-11-09
 aliases: []
 tags:
   - note/publish
+description: 使用しているGoogle Chromeの拡張機能をまとめたリスト。
 ---
 
 - [Ad Guard 広告ブロッカー](https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
@@ -91,3 +92,8 @@ tags:
 > 	"path": "Clippings"
 > }
 > ```
+
+テーマも自作している→[Chrome Themes](https://github.com/masaki39/chrome-themes)
+Tokyo Nightカラーを使用している。自作にしたメリットとしてアクティブタブの色を変更して明確にわかるようになった。
+
+> [!quote] [[📘Google Chromeのテーマを自作する]]
