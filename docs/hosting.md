@@ -15,6 +15,9 @@ However, if you'd like to publish your site to the world, you need a way to host
 > [!tip] Keeping plugins in sync
 > All hosting examples below use `npx quartz plugin install` to install plugins from the lockfile. If contributors may add plugins to `quartz.config.yaml` without updating the lockfile, add `npx quartz plugin install --from-config` after `install` in your build command to install any missing plugins. See [[cli/plugin#install|plugin install]] for details.
 
+> [!note] Builds fail on broken plugins
+> Hosted builds run with the `CI` environment variable set, so a plugin that fails to load or needs a newer Quartz fails the deploy instead of publishing a site with a missing feature. Run `npx quartz plugin doctor` locally to find the cause, or set `QUARTZ_ALLOW_BROKEN_PLUGINS=1` / `QUARTZ_ALLOW_INCOMPATIBLE_PLUGINS=1` in the build environment to deploy anyway. See [[troubleshooting#Reading build output]].
+
 ## Cloudflare Pages
 
 1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account.
@@ -40,9 +43,9 @@ To add a custom domain, check out [Cloudflare's documentation](https://developer
 
 ## GitHub Pages
 
-In your local Quartz, create a new file `quartz/.github/workflows/deploy.yml`.
+In your local Quartz, create a new file `.github/workflows/deploy.yml` at the root of the repository.
 
-```yaml title="quartz/.github/workflows/deploy.yml"
+```yaml title=".github/workflows/deploy.yml"
 name: Deploy Quartz site to GitHub Pages
 
 on:
@@ -134,7 +137,11 @@ Here's how to add a custom domain to your GitHub pages deployment.
      - `185.199.111.153`
    - If you are using a subdomain, navigate to your DNS provider and create a `CNAME` record that points your subdomain to the default domain for your site. For example, if you want to use the subdomain `quartz.example.com` for your user site, create a `CNAME` record that points `quartz.example.com` to `<github-username>.github.io`.
 
-![[dns records.png]]_The above shows a screenshot of Google Domains configured for both `jzhao.xyz` (an apex domain) and `quartz.jzhao.xyz` (a subdomain)._
+![[dns records.png]]_The above shows a screenshot of Google Domains configured for both `jzhao.xyz`
+
+(an apex domain) and `quartz.jzhao.xyz`
+
+(a subdomain)._
 
 See the [GitHub documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain) for more detail about how to setup your own custom domain with GitHub Pages.
 
